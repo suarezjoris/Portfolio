@@ -124,6 +124,8 @@
 /* Post modal */
 .post-modal-box {
   max-width: 680px;
+  max-height: 85vh;
+  overflow-y: auto;
 }
 
 .post-detail {
