@@ -1,0 +1,349 @@
+/* ========================
+   BENTO GRID — homepage
+   ======================== */
+.bento {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-auto-rows: auto;
+  gap: 12px;
+  padding: 24px 24px 96px;
+  max-width: 1380px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+  min-height: 100dvh;
+  align-content: start;
+}
+
+/* Column spans */
+.col-7 { grid-column: span 7; }
+.col-5 { grid-column: span 5; }
+.col-8 { grid-column: span 8; }
+.col-4 { grid-column: span 4; }
+.col-6 { grid-column: span 6; }
+.col-3 { grid-column: span 3; }
+
+/* ========================
+   CARD: HERO
+   ======================== */
+.card-hero {
+  padding: 28px 32px;
+  min-height: 260px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  cursor: default;
+  overflow: hidden;
+}
+
+.hero-bg-word {
+  position: absolute;
+  top: -12px;
+  right: -8px;
+  font-family: var(--font-display);
+  font-weight: 900;
+  font-size: clamp(100px, 15vw, 180px);
+  line-height: 1;
+  color: rgba(255, 255, 255, 0.025);
+  letter-spacing: -8px;
+  user-select: none;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.hero-title {
+  font-family: var(--font-display);
+  font-size: clamp(1.65rem, 3.2vw, 2.5rem);
+  font-weight: 700;
+  line-height: 1.18;
+  letter-spacing: -0.5px;
+  color: var(--text);
+  margin: 10px 0 14px;
+}
+
+.hero-since {
+  font-size: 13px;
+  color: var(--text-3);
+  font-weight: 500;
+}
+
+/* ========================
+   CARD: STATUS
+   ======================== */
+.card-status {
+  padding: 22px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.status-row {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.status-headline {
+  font-size: 1.35rem;
+  font-weight: 700;
+  letter-spacing: -0.4px;
+  margin-top: 4px;
+  line-height: 1.2;
+}
+
+.status-meta {
+  font-size: 13px;
+  color: var(--text-2);
+  flex: 1;
+}
+
+/* ========================
+   CARD: GITHUB
+   ======================== */
+.card-github {
+  padding: 22px 24px;
+  display: flex;
+  flex-direction: column;
+}
+
+.github-link {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 14px;
+  background: rgba(255,255,255,0.04);
+  border: 0.5px solid var(--border);
+  border-radius: var(--r-sm);
+  transition: background var(--t), border-color var(--t);
+  margin-top: auto;
+}
+
+.github-link:hover {
+  background: rgba(255,255,255,0.07);
+  border-color: var(--border-hover);
+}
+
+.gh-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background: rgba(255,255,255,0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 13px;
+  flex-shrink: 0;
+  color: var(--text);
+}
+
+.gh-username {
+  font-weight: 600;
+  font-size: 14.5px;
+  color: var(--text);
+}
+
+.gh-sub {
+  font-size: 12px;
+  color: var(--text-3);
+  margin-top: 2px;
+}
+
+.gh-icon {
+  margin-left: auto;
+  color: var(--text-3);
+  flex-shrink: 0;
+  width: 18px;
+  height: 18px;
+}
+
+/* ========================
+   CARD: FEATURED WORK
+   ======================== */
+.card-work {
+  padding: 26px 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.work-title {
+  font-size: 1.55rem;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  margin-top: 4px;
+}
+
+.work-desc {
+  font-size: 13.5px;
+  color: var(--text-2);
+  line-height: 1.65;
+  flex: 1;
+}
+
+.work-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  padding-top: 4px;
+}
+
+/* ========================
+   CARD: BLOG
+   ======================== */
+.card-blog {
+  padding: 22px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.card-blog-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  letter-spacing: -0.3px;
+  margin-top: 4px;
+  line-height: 1.25;
+}
+
+.card-blog-desc {
+  font-size: 13px;
+  color: var(--text-2);
+  line-height: 1.6;
+  flex: 1;
+}
+
+/* ========================
+   CARD: STACK
+   ======================== */
+.card-stack {
+  padding: 22px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.stack-cloud {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  align-content: flex-start;
+}
+
+/* ========================
+   CARD: ABOUT SNIPPET
+   ======================== */
+.card-about {
+  padding: 22px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.about-snip {
+  font-size: 13.5px;
+  color: var(--text-2);
+  line-height: 1.65;
+  flex: 1;
+}
+
+/* ========================
+   CARD: SOCIAL
+   ======================== */
+.card-social {
+  padding: 22px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+
+.social-row {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  margin-top: auto;
+}
+
+.social-chip {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 14px;
+  background: rgba(255,255,255,0.04);
+  border: 0.5px solid var(--border);
+  border-radius: var(--r-sm);
+  font-size: 13.5px;
+  font-weight: 500;
+  color: var(--text-2);
+  transition: background var(--t), border-color var(--t), color var(--t);
+}
+
+.social-chip:hover {
+  background: rgba(255,255,255,0.07);
+  border-color: var(--border-hover);
+  color: var(--text);
+}
+
+.social-chip svg { width: 16px; height: 16px; flex-shrink: 0; }
+
+/* ========================
+   CARD: LAB
+   ======================== */
+.card-lab {
+  padding: 22px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  overflow: hidden;
+}
+
+.card-lab::after {
+  content: '';
+  position: absolute;
+  bottom: -30px;
+  right: -20px;
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(37, 99, 235, 0.12) 0%, transparent 70%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.lab-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  letter-spacing: -0.3px;
+  margin-top: 4px;
+  line-height: 1.25;
+}
+
+.lab-desc {
+  font-size: 13px;
+  color: var(--text-2);
+  line-height: 1.6;
+  flex: 1;
+}
+
+/* ========================
+   RESPONSIVE
+   ======================== */
+@media (max-width: 1080px) {
+  .col-7 { grid-column: span 7; }
+  .col-5 { grid-column: span 5; }
+  .col-8 { grid-column: span 8; }
+  .col-4 { grid-column: span 4; }
+}
+
+@media (max-width: 800px) {
+  .bento { padding: 14px 14px 88px; gap: 10px; }
+  .col-7, .col-5, .col-8, .col-4, .col-6, .col-3 { grid-column: span 12; }
+  .card-hero { min-height: 200px; padding: 22px 24px; }
+  .hero-bg-word { font-size: 100px; }
+}
+
+@media (max-width: 480px) {
+  .bento { padding: 10px 10px 84px; }
+  .hero-title { font-size: 1.5rem; }
+}
