@@ -14,7 +14,7 @@ Personal portfolio website showcasing my work as a Web Developer & UI Designer.
 - HTML5
 - CSS3 (Custom Properties, Flexbox/Grid, Animations)
 - Vanilla JavaScript
-- Google Fonts (Inter)
+- Google Fonts (Inter) **Yeah I know it's basic**
 
 ## Project Structure
 
