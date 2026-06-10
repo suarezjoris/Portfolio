@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>À propos — Joris Suarez</title>
+  <meta name="description" content="Développeur web et UI designer depuis 2017 basé à Lyon. Découvrez mon parcours, mes compétences et ma façon de travailler.">
   <link rel="icon" type="image/svg+xml" href="../favicon.svg">
   <link rel="stylesheet" href="../styles.css">
   <link rel="stylesheet" href="../css/about.css">
@@ -12,10 +13,11 @@
 
 <main class="about-page">
 
+  <!-- Hero -->
   <section class="about-hero reveal" style="--delay:0s">
     <span class="label" data-fr="À propos de moi" data-en="About me">À propos de moi</span>
     <h1 class="about-headline" data-fr="Je construis des interfaces pensées pour les humains." data-en="I build interfaces designed for humans.">Je construis des interfaces<br>pensées pour les humains.</h1>
-    <p class="about-bio" data-fr="Développeur web et UI designer depuis 2017. Passionné par l'intersection du design et du code — créer des expériences qui semblent simples mais sont réfléchies dans les moindres détails. Basé à Lyon, je travaille en remote sur des projets qui valent la peine d'être bien faits." data-en="Web developer and UI designer since 2017. Passionate about the intersection of design and code — crafting experiences that look simple but are thoughtfully designed down to the smallest detail. Based in Lyon, working remotely on projects worth doing right.">Développeur web et UI designer depuis 2017. Passionné par l'intersection du design et du code — créer des expériences qui semblent simples mais sont réfléchies dans les moindres détails. Basé à Lyon, je travaille en remote sur des projets qui valent la peine d'être bien faits.</p>
+    <p class="about-bio" data-fr="Développeur web et UI designer depuis 2017. Je suis passionné par l'intersection du design et du code — créer des expériences qui semblent simples en surface, mais qui sont réfléchies dans les moindres détails. Basé à Lyon, je travaille en remote sur des projets qui valent la peine d'être bien faits." data-en="Web developer and UI designer since 2017. I'm passionate about the intersection of design and code — crafting experiences that look simple on the surface, but are thoughtfully designed down to the smallest detail. Based in Lyon, working remotely on projects worth doing right.">Développeur web et UI designer depuis 2017. Je suis passionné par l'intersection du design et du code — créer des expériences qui semblent simples en surface, mais qui sont réfléchies dans les moindres détails. Basé à Lyon, je travaille en remote sur des projets qui valent la peine d'être bien faits.</p>
     <div class="about-meta">
       <span class="meta-chip">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="13" height="13"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
@@ -32,11 +34,67 @@
     </div>
   </section>
 
+  <!-- Skills -->
+  <section class="skills-section reveal" style="--delay:0.1s">
+    <span class="label" data-fr="Compétences" data-en="Skills">Compétences</span>
+    <div class="skills-grid">
+
+      <div class="skill-group card">
+        <div class="skill-group-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+        </div>
+        <h3 data-fr="Développement" data-en="Development">Développement</h3>
+        <div class="skill-tags">
+          <a href="works.html" class="tag tag-link">HTML5</a>
+          <a href="works.html" class="tag tag-link">CSS3</a>
+          <a href="works.html" class="tag tag-link">JavaScript</a>
+          <a href="works.html" class="tag tag-link">TypeScript</a>
+          <a href="works.html" class="tag tag-link">React</a>
+          <a href="works.html" class="tag tag-link">Node.js</a>
+          <a href="works.html" class="tag tag-link">Rust</a>
+          <a href="works.html" class="tag tag-link">Tauri</a>
+          <a href="works.html" class="tag tag-link">Python</a>
+        </div>
+      </div>
+
+      <div class="skill-group card">
+        <div class="skill-group-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="9" cy="9" r="2"/><path d="M21 15l-5-5L5 21"/></svg>
+        </div>
+        <h3 data-fr="Design & UX" data-en="Design & UX">Design & UX</h3>
+        <div class="skill-tags">
+          <a href="works.html" class="tag tag-link">Figma</a>
+          <span class="tag">UI Design</span>
+          <span class="tag">UX Research</span>
+          <span class="tag">Prototyping</span>
+          <span class="tag">Design System</span>
+          <span class="tag">Wireframing</span>
+        </div>
+      </div>
+
+      <div class="skill-group card">
+        <div class="skill-group-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
+        </div>
+        <h3 data-fr="Infrastructure" data-en="Infrastructure">Infrastructure</h3>
+        <div class="skill-tags">
+          <a href="works.html" class="tag tag-link">Supabase</a>
+          <a href="works.html" class="tag tag-link">Tailwind CSS</a>
+          <span class="tag">Git</span>
+          <span class="tag">REST API</span>
+          <span class="tag">SQL</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Process -->
   <section class="process-section">
-    <span class="label reveal" style="--delay:0.1s" data-fr="Mon processus" data-en="My process">Mon processus</span>
+    <span class="label reveal" style="--delay:0.15s" data-fr="Mon processus" data-en="My process">Mon processus</span>
     <div class="process-grid">
 
-      <article class="card process-card reveal" style="--delay:0.15s">
+      <article class="card process-card reveal" style="--delay:0.2s">
         <div class="process-num">01</div>
         <div class="process-icon">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75">
@@ -47,7 +105,7 @@
         <p data-fr="Comprendre les besoins réels commence ici. À travers des entretiens détaillés, je cerne vos objectifs et les attentes de vos utilisateurs." data-en="Understanding real needs starts here. Through detailed interviews, I identify your goals and your users' expectations.">Comprendre les besoins réels commence ici. À travers des entretiens détaillés, je cerne vos objectifs et les attentes de vos utilisateurs.</p>
       </article>
 
-      <article class="card process-card reveal" style="--delay:0.2s">
+      <article class="card process-card reveal" style="--delay:0.25s">
         <div class="process-num">02</div>
         <div class="process-icon">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75">
@@ -58,7 +116,7 @@
         <p data-fr="En analysant la concurrence et les cibles, je pose les bases d'une direction produit stratégique et orientée données." data-en="By analyzing competition and targets, I lay the groundwork for a strategic, data-driven product direction.">En analysant la concurrence et les cibles, je pose les bases d'une direction produit stratégique et orientée données.</p>
       </article>
 
-      <article class="card process-card reveal" style="--delay:0.25s">
+      <article class="card process-card reveal" style="--delay:0.3s">
         <div class="process-num">03</div>
         <div class="process-icon">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75">
@@ -72,7 +130,80 @@
     </div>
   </section>
 
-  <section class="interests-section reveal" style="--delay:0.3s">
+  <!-- Values -->
+  <section class="values-section reveal" style="--delay:0.35s">
+    <span class="label" data-fr="Ce qui me guide" data-en="What drives me">Ce qui me guide</span>
+    <div class="values-grid">
+      <div class="value-card card">
+        <div class="value-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><circle cx="12" cy="12" r="10"/><path d="M12 8v4M12 16h.01"/></svg>
+        </div>
+        <h4 data-fr="Clarté" data-en="Clarity">Clarté</h4>
+        <p data-fr="Un bon design se comprend au premier regard. Chaque décision — typographie, espacement, hiérarchie — doit guider sans effort." data-en="Good design is understood at first glance. Every decision — typography, spacing, hierarchy — should guide effortlessly.">Un bon design se comprend au premier regard. Chaque décision: typographie, espacement, hiérarchie, doit guider sans effort.</p>
+      </div>
+      <div class="value-card card">
+        <div class="value-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <h4 data-fr="Qualité" data-en="Quality">Qualité</h4>
+        <p data-fr="Chaque pixel, chaque ligne de code est intentionnelle. Je mesure chaque parcel de code et le rend optimal." data-en="Every pixel, every line of code is intentional. I optimize every code and make it fluent.">Chaque pixel, chaque ligne de code est intentionnelle. Je mesure chaque parcel de code et le rend optimal.</p>
+      </div>
+      <div class="value-card card">
+        <div class="value-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M9 12l2 2 4-4"/><path d="M20.618 5.984A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622C17.176 19.29 21 14.591 21 9a12.02 12.02 0 00-.382-3.016z"/></svg>
+        </div>
+        <h4 data-fr="Discipline" data-en="Discipline">Discipline</h4>
+        <p data-fr="Travailler avec méthode, itérer avec intention. La régularité construit mieux que l'inspiration sporadique." data-en="Work methodically, iterate with intention. Consistency builds better than sporadic inspiration.">Travailler avec méthode, itérer avec intention. La régularité construit mieux que l'inspiration sporadique.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Philosophy Podium -->
+  <section class="philosophy-section reveal" style="--delay:0.37s">
+    <span class="label" data-fr="Philosophie de code" data-en="Coding philosophy">Philosophie de code</span>
+    <div class="podium">
+
+      <!-- 2nd -->
+      <div class="podium-col">
+        <div class="podium-card card">
+          <div class="podium-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><circle cx="12" cy="12" r="10"/><polygon points="16.24,7.76 14.12,14.12 7.76,16.24 9.88,9.88"/></svg>
+          </div>
+          <h3 class="podium-name" data-fr="Curieux" data-en="Curious">Curieux</h3>
+          <p class="podium-desc" data-fr="Toujours à explorer ce qui est au-delà de la prochaine colline. L'apprentissage ne s'arrête jamais." data-en="Always exploring what's beyond the next hill. Learning never stops.">Toujours à explorer ce qui est au-delà de la prochaine colline. L'apprentissage ne s'arrête jamais.</p>
+        </div>
+        <div class="podium-block podium-block-2">02</div>
+      </div>
+
+      <!-- 1st -->
+      <div class="podium-col">
+        <div class="podium-card podium-card-gold card">
+          <div class="podium-icon podium-icon-gold">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/><path d="M9 1v3M15 1v3M9 20v3M15 20v3M1 9h3M1 15h3M20 9h3M20 15h3"/></svg>
+          </div>
+          <h3 class="podium-name">Hardware Awareness</h3>
+          <p class="podium-desc" data-fr="Écrire du code qui respecte la machine. Cache, mémoire, cycles CPU, chaque instruction compte." data-en="Writing code that respects the machine. Cache, memory, CPU cycles, every instruction counts.">Écrire du code qui respecte la machine. Cache, mémoire, cycles CPU, chaque instruction compte.</p>
+        </div>
+        <div class="podium-block podium-block-1">01</div>
+      </div>
+
+      <!-- 3rd -->
+      <div class="podium-col">
+        <div class="podium-card card">
+          <div class="podium-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
+          </div>
+          <h3 class="podium-name" data-fr="Mommy Helper" data-en="Mommy Helper">Mommy Helper</h3>
+          <p class="podium-desc" data-fr="Si ma mère comprend, tout le monde comprend. La complexité ne devrait jamais être visible." data-en="If my mom gets it, anyone does. Complexity should never be visible.">Si ma mère comprend, tout le monde comprend. La complexité ne devrait jamais être visible.</p>
+        </div>
+        <div class="podium-block podium-block-3">03</div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Interests -->
+  <section class="interests-section reveal" style="--delay:0.4s">
     <span class="label" data-fr="Centres d'intérêt" data-en="Interests">Centres d'intérêt</span>
     <div class="interests-grid">
       <div class="interest-item">

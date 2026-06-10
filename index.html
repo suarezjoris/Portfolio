@@ -6,29 +6,36 @@
   <title>Joris Suarez — Web Developer & UI Designer</title>
   <meta name="description" content="Portfolio de Joris Suarez, développeur web et UI designer depuis 2017. Lyon, France.">
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
-  <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="css/home.css">
+  <link rel="stylesheet" href="styles.css?v=3">
+  <link rel="stylesheet" href="css/home.css?v=3">
 </head>
 <body>
 
 <main class="bento" id="main">
 
   <!-- Hero -->
-  <article class="card card-hero col-7 reveal" style="--delay:0s">
+  <article class="card card-hero col-5 reveal" style="--delay:0s">
     <div class="hero-bg-word" aria-hidden="true">SJ</div>
     <span class="label" data-fr="Développeur Web & UI Designer" data-en="Web Developer & UI Designer">Développeur Web & UI Designer</span>
     <h1 class="hero-title" data-fr="Je crée des interfaces qui n'existent pas encore." data-en="I build interfaces that don't exist yet.">Je crée des interfaces qui n'existent pas encore.</h1>
     <p class="hero-since" data-fr="Depuis 2017 · Lyon, France" data-en="Since 2017 · Lyon, France">Depuis 2017 · Lyon, France</p>
   </article>
 
+  <!-- Photo -->
+  <article class="card card-photo col-3 reveal" style="--delay:0.06s">
+    <img src="assets/joris.jpg" alt="Joris Suarez" class="hero-photo" width="280" height="373" loading="lazy">
+  </article>
+
   <!-- Status -->
-  <article class="card card-status col-5 reveal" style="--delay:0.08s">
-    <div class="status-row">
-      <div class="status-dot"></div>
-      <span class="label" data-fr="Disponible" data-en="Available">Disponible</span>
+  <article class="card card-status col-4 reveal" style="--delay:0.08s">
+    <div class="status-main">
+      <div class="status-row">
+        <div class="status-dot"></div>
+        <span class="label" data-fr="Disponible" data-en="Available">Disponible</span>
+      </div>
+      <h2 class="status-headline" data-fr="Ouvert aux projets" data-en="Open for projects">Ouvert aux projets</h2>
+      <p class="status-meta">Freelance · Remote · France</p>
     </div>
-    <h2 class="status-headline" data-fr="Ouvert aux projets" data-en="Open for projects">Ouvert aux projets</h2>
-    <p class="status-meta">Freelance · Remote · France</p>
     <a href="HTML_PAGES/contact.html" class="cta-link">
       <span data-fr="Me contacter" data-en="Get in touch">Me contacter</span>
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
@@ -55,6 +62,7 @@
   <!-- GitHub -->
   <article class="card card-github col-4 reveal" style="--delay:0.1s">
     <span class="label">GitHub</span>
+    <p class="github-desc" data-fr="Mes projets open source et expérimentations." data-en="My open source projects and experiments.">Mes projets open source et expérimentations.</p>
     <a href="https://github.com/suarezjoris" target="_blank" rel="noopener noreferrer" class="github-link">
       <div class="gh-avatar">SJ</div>
       <div>
@@ -68,7 +76,7 @@
   </article>
 
   <!-- Blog -->
-  <article class="card card-blog col-4 reveal" style="--delay:0.18s">
+  <article class="card card-blog col-6 reveal" style="--delay:0.18s">
     <span class="label">Blog</span>
     <h2 class="card-blog-title" data-fr="Écrits & Réflexions" data-en="Writings & Thoughts">Écrits & Réflexions</h2>
     <p class="card-blog-desc" data-fr="Je documente ce que j'apprends. Design, code, process, opinions." data-en="I document what I learn. Design, code, process, opinions.">Je documente ce que j'apprends. Design, code, process, opinions.</p>
@@ -79,16 +87,21 @@
   </article>
 
   <!-- Stack -->
-  <article class="card card-stack col-4 reveal" style="--delay:0.22s">
+  <article class="card card-stack col-6 reveal" style="--delay:0.22s">
     <span class="label">Stack</span>
     <div class="stack-cloud">
-      <span class="tag">HTML5</span>
-      <span class="tag">CSS3</span>
-      <span class="tag">JavaScript</span>
-      <span class="tag">UI Design</span>
-      <span class="tag">Figma</span>
-      <span class="tag">UX Research</span>
-      <span class="tag">Supabase</span>
+      <a href="HTML_PAGES/works.html" class="tag tag-link">HTML5</a>
+      <a href="HTML_PAGES/works.html" class="tag tag-link">CSS3</a>
+      <a href="HTML_PAGES/works.html" class="tag tag-link">JavaScript</a>
+      <a href="HTML_PAGES/works.html" class="tag tag-link">TypeScript</a>
+      <a href="HTML_PAGES/works.html" class="tag tag-link">React</a>
+      <a href="HTML_PAGES/works.html" class="tag tag-link">Node.js</a>
+      <a href="HTML_PAGES/works.html" class="tag tag-link">Tailwind CSS</a>
+      <a href="HTML_PAGES/works.html" class="tag tag-link">Figma</a>
+      <a href="HTML_PAGES/works.html" class="tag tag-link">Supabase</a>
+      <a href="HTML_PAGES/works.html" class="tag tag-link">Rust</a>
+      <a href="HTML_PAGES/works.html" class="tag tag-link">Tauri</a>
+      <a href="HTML_PAGES/works.html" class="tag tag-link">Python</a>
     </div>
   </article>
 
