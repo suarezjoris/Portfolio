@@ -17,8 +17,14 @@
     .wide { font-weight:900; transform:scaleX(1.04); transform-origin:left; display:inline-block; }
     .cut { clip-path:polygon(0 0,100% 0,100% calc(100% - 9px),calc(100% - 9px) 100%,0 100%); }
     .stripeY { background:repeating-linear-gradient(-45deg,#111110 0 12px,#e8ff00 12px 24px); }
-    .repo { transition:transform .18s ease, box-shadow .18s ease; }
-    .repo:hover { transform:translateY(-3px); box-shadow:7px 7px 0 #111110; }
+    .repo-row { display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; padding:18px 20px; border-bottom:2px solid #111110; transition:background .15s ease, color .15s ease; color:#111110; gap:16px; text-decoration:none; }
+    .repo-row:hover { background:#111110; color:#e8e6dd; }
+    .repo-row .stat { color:#54524a; transition: color .15s ease; }
+    .repo-row:hover .stat { color:#9d9c8f; }
+    .repo-row .lang-square { border:1.5px solid #111110; transition: border-color .15s ease; }
+    .repo-row:hover .lang-square { border-color: #e8e6dd; }
+    .repo-left { display:flex; align-items:center; gap:24px; flex:1; min-width:240px; }
+    .repo-right { display:flex; align-items:center; gap:20px; flex-wrap:wrap; }
     @keyframes spin { to { transform:rotate(360deg); } }
   </style>
 </head>
@@ -63,7 +69,7 @@
   </div>
 
   <div id="state-loaded" style="display:none;">
-    <div id="repos-grid" style="display:grid; grid-template-columns:repeat(auto-fill,minmax(310px,1fr)); gap:16px;"></div>
+    <div id="repos-grid" style="display:flex; flex-direction:column; border-top:2px solid #111110;"></div>
   </div>
 
 </main>
@@ -74,7 +80,6 @@
   <a href="about.html" class="mono" style="display:flex; align-items:center; padding:11px 15px; font-size:11px; font-weight:700; letter-spacing:0.08em; text-transform:uppercase; color:#e8e6dd;" onmouseover="this.style.color='#e8ff00'" onmouseout="this.style.color='#e8e6dd'" data-fr="À propos" data-en="About">À propos</a>
   <a href="works.html" class="mono" style="display:flex; align-items:center; padding:11px 15px; font-size:11px; font-weight:800; letter-spacing:0.08em; text-transform:uppercase; background:#e8ff00; color:#111110;">Works</a>
   <a href="blogs.html" class="mono" style="display:flex; align-items:center; padding:11px 15px; font-size:11px; font-weight:700; letter-spacing:0.08em; text-transform:uppercase; color:#e8e6dd;" onmouseover="this.style.color='#e8ff00'" onmouseout="this.style.color='#e8e6dd'">Blog</a>
-  <a href="lab.html" class="mono" style="display:flex; align-items:center; padding:11px 15px; font-size:11px; font-weight:700; letter-spacing:0.08em; text-transform:uppercase; color:#e8e6dd;" onmouseover="this.style.color='#e8ff00'" onmouseout="this.style.color='#e8e6dd'">Lab</a>
   <a href="contact.html" class="mono" style="display:flex; align-items:center; padding:11px 15px; font-size:11px; font-weight:700; letter-spacing:0.08em; text-transform:uppercase; color:#e8e6dd;" onmouseover="this.style.color='#e8ff00'" onmouseout="this.style.color='#e8e6dd'" data-fr="Contact" data-en="Contact">Contact</a>
   <button id="lang-btn" class="mono" style="display:flex; align-items:center; padding:11px 14px; font-size:11px; font-weight:800; letter-spacing:0.08em; text-transform:uppercase; background:#ff4d0f; color:#111110; border:none; cursor:pointer;">FR</button>
 </nav>
@@ -113,17 +118,18 @@
         const grid = document.getElementById('repos-grid');
         grid.innerHTML = repos.map((r, i) => {
           const color = langColors[r.language] || '#8a897d';
-          return `<a href="${r.html_url}" target="_blank" rel="noopener" class="repo cut" style="border:2px solid #111110; background:#e8e6dd; padding:22px; display:flex; flex-direction:column; min-height:190px;">
-            <div style="display:flex; align-items:flex-start; justify-content:space-between; gap:10px;">
-              <span class="mono" style="font-size:10px; letter-spacing:0.1em; color:#c43a0c; text-transform:uppercase; font-weight:700;">R_${String(i+1).padStart(2,'0')}</span>
-              <span class="mono" style="font-size:13px;">↗</span>
+          return `<a href="${r.html_url}" target="_blank" rel="noopener" class="repo-row">
+            <div class="repo-left">
+              <span class="mono" style="font-size:10px; letter-spacing:0.1em; color:#c43a0c; text-transform:uppercase; font-weight:700; width:35px; flex-shrink:0;">R_${String(i+1).padStart(2,'0')}</span>
+              <span class="wide" style="font-size:clamp(18px,2.5vw,24px); text-transform:uppercase; line-height:1; word-break:break-word; margin-bottom:-4px;">${r.name}</span>
             </div>
-            <div class="wide" style="margin-top:14px; font-size:22px; text-transform:uppercase; line-height:0.95; word-break:break-word;">${r.name}</div>
-            <p style="margin:10px 0 0; flex:1; font-size:13.5px; line-height:1.5; color:#54524a; font-weight:500;">${r.description || '—'}</p>
-            <div style="display:flex; align-items:center; gap:14px; margin-top:16px; flex-wrap:wrap;">
-              <span class="mono" style="display:inline-flex; align-items:center; gap:6px; font-size:11px; font-weight:600;"><span style="width:10px; height:10px; background:${color}; border:1.5px solid #111110; display:inline-block;"></span>${r.language || 'N/A'}</span>
-              <span class="mono" style="font-size:11px; font-weight:600; color:#54524a;">★ ${r.stargazers_count}</span>
-              <span class="mono" style="font-size:11px; font-weight:600; color:#54524a;">⑂ ${r.forks_count}</span>
+            <div class="repo-right">
+              <span class="mono" style="display:inline-flex; align-items:center; gap:8px; font-size:12px; font-weight:600; width:110px;">
+                <span class="lang-square" style="width:10px; height:10px; background:${color}; display:inline-block;"></span>${r.language || 'N/A'}
+              </span>
+              <span class="mono stat" style="font-size:12px; font-weight:600; width:45px;">★ ${r.stargazers_count}</span>
+              <span class="mono stat" style="font-size:12px; font-weight:600; width:45px;">⑂ ${r.forks_count}</span>
+              <span class="mono" style="font-size:14px; margin-left:10px;">↗</span>
             </div>
           </a>`;
         }).join('');
