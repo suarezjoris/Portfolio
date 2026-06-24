@@ -3,229 +3,217 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Joris Suarez — Web Developer & UI Designer</title>
-  <meta name="description" content="Portfolio de Joris Suarez, développeur web et UI designer depuis 2017. Lyon, France.">
+  <title>Joris Suarez — Fullstack Developer</title>
+  <meta name="description" content="Portfolio de Joris Suarez, développeur fullstack depuis 2017. Lyon, France.">
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
-  <link rel="stylesheet" href="styles.css?v=3">
-  <link rel="stylesheet" href="css/home.css?v=3">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <style>
+    body { margin: 0; background: #e8e6dd; color: #111110; font-family: 'Archivo', sans-serif; -webkit-font-smoothing: antialiased; }
+    * { box-sizing: border-box; }
+    ::selection { background: #e8ff00; color: #111110; }
+    a { color: inherit; text-decoration: none; }
+    .mono { font-family: 'JetBrains Mono', monospace; }
+    .wide { font-weight: 900; transform: scaleX(1.04); transform-origin: left; display: inline-block; }
+    .cut { clip-path: polygon(0 0, 100% 0, 100% calc(100% - 9px), calc(100% - 9px) 100%, 0 100%); }
+    .bento { display: grid; grid-template-columns: repeat(12, 1fr); gap: 14px; }
+    .cell { border: 2px solid #111110; background: #e8e6dd; position: relative; overflow: hidden; transition: transform .18s ease, box-shadow .18s ease; }
+    .cell:hover { transform: translateY(-3px); box-shadow: 7px 7px 0 #111110; }
+    @media (max-width: 860px) {
+      .bento { grid-template-columns: repeat(6, 1fr); }
+      .col-span { grid-column: span 6 !important; }
+    }
+    @media (max-width: 560px) {
+      .bento { grid-template-columns: 1fr; }
+      .col-span { grid-column: span 1 !important; }
+    }
+  </style>
 </head>
 <body>
 
-<main class="bento" id="main">
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+  <filter id="rough"><feTurbulence type="fractalNoise" baseFrequency="0.016 0.022" numOctaves="3" seed="7" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="8"/></filter>
+</defs></svg>
 
-  <!-- Hero -->
-  <article class="card card-hero col-5 reveal" style="--delay:0s">
-    <div class="hero-bg-word" aria-hidden="true">SJ</div>
-    <span class="label" data-fr="Développeur Web & UI Designer" data-en="Web Developer & UI Designer">Développeur Web & UI Designer</span>
-    <h1 class="hero-title" data-fr="Je crée des interfaces qui n'existent pas encore." data-en="I build interfaces that don't exist yet.">Je crée des interfaces qui n'existent pas encore.</h1>
-    <p class="hero-since" data-fr="Depuis 2017 · Lyon, France" data-en="Since 2017 · Lyon, France">Depuis 2017 · Lyon, France</p>
-  </article>
+<!-- HUD TOP RAIL -->
+<div class="mono" style="display:flex; justify-content:space-between; align-items:center; gap:12px; padding:8px clamp(16px,4vw,40px); background:#111110; color:#8a897d; font-size:9.5px; letter-spacing:0.16em; text-transform:uppercase;">
+  <span style="color:#e8ff00;">◢◤</span>
+  <span style="color:#e8e6dd;">&ldquo;JORIS SUAREZ&rdquo; — FULLSTACK DEVELOPER</span>
+  <span style="flex:1; height:2px; background:repeating-linear-gradient(90deg,#34342b 0 5px,transparent 5px 10px);"></span>
+  <span>LYON · FR</span>
+  <span id="hud-status" style="color:#ff4d0f;" data-fr="DISPONIBLE" data-en="AVAILABLE">DISPONIBLE</span>
+  <span style="color:#e8ff00;">◢◤</span>
+</div>
 
-  <!-- Photo -->
-  <article class="card card-photo col-3 reveal" style="--delay:0.06s">
-    <img src="assets/joris.jpg" alt="Joris Suarez" class="hero-photo" width="280" height="373" loading="lazy">
-  </article>
+<main style="max-width:1280px; margin:0 auto; padding:clamp(18px,3vw,34px) clamp(16px,4vw,40px) 140px;">
 
-  <!-- Status -->
-  <article class="card card-status col-4 reveal" style="--delay:0.08s">
-    <div class="status-main">
-      <div class="status-row">
-        <div class="status-dot"></div>
-        <span class="label" data-fr="Disponible" data-en="Available">Disponible</span>
+  <div class="bento">
+
+    <!-- ROW 1 -->
+
+    <!-- Hero col-5 -->
+    <section class="cell col-span" style="grid-column:span 5; padding:30px; display:flex; flex-direction:column; justify-content:space-between; min-height:300px;">
+      <div aria-hidden="true" class="wide" style="position:absolute; right:-3%; bottom:-12%; font-size:230px; line-height:0.7; color:rgba(17,17,16,0.05); pointer-events:none; transform-origin:right;">*</div>
+      <div style="position:relative;">
+        <span class="mono cut" style="display:inline-block; background:#e8ff00; color:#111110; font-size:10px; font-weight:800; letter-spacing:0.12em; padding:5px 11px; text-transform:uppercase; border:2px solid #111110;" data-fr="DÉVELOPPEUR FULLSTACK" data-en="FULLSTACK DEVELOPER">DÉVELOPPEUR FULLSTACK</span>
       </div>
-      <h2 class="status-headline" data-fr="Ouvert aux projets" data-en="Open for projects">Ouvert aux projets</h2>
-      <p class="status-meta">Freelance · Remote · France</p>
-    </div>
-    <a href="HTML_PAGES/contact.html" class="cta-link">
-      <span data-fr="Me contacter" data-en="Get in touch">Me contacter</span>
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
-    </a>
-  </article>
+      <h1 class="wide" style="position:relative; margin:18px 0 0; font-size:clamp(34px,4.6vw,56px); line-height:0.92; text-transform:uppercase; letter-spacing:-0.01em;" data-fr="Je construis le rare, pas le banal." data-en="I build the rare, not the ordinary.">Je construis le rare, pas le banal.</h1>
+      <div class="mono" style="position:relative; margin-top:18px; font-size:11px; letter-spacing:0.1em; color:#54524a; text-transform:uppercase;" data-fr="DEPUIS 2017 · LYON, FRANCE" data-en="SINCE 2017 · LYON, FRANCE">DEPUIS 2017 · LYON, FRANCE</div>
+    </section>
 
-  <!-- Featured Work -->
-  <article class="card card-work col-8 reveal" style="--delay:0.13s">
-    <span class="label" data-fr="Projet en cours" data-en="Current project">Projet en cours</span>
-    <h2 class="work-title" data-fr="Horizon" data-en="Horizon">Horizon</h2>
-    <p class="work-desc" data-fr="Assistant IA personnel, local et non censuré. Rust, Tauri, Ollama, ComfyUI." data-en="Private, locally-hosted AI assistant. Rust, Tauri, Ollama, ComfyUI.">Assistant IA personnel, local et non censuré. Rust, Tauri, Ollama, ComfyUI.</p>
-    <div class="work-tags">
-      <span class="tag">Rust</span>
-      <span class="tag">Tauri</span>
-      <span class="tag">Ollama</span>
-      <span class="tag">Python</span>
-    </div>
-    <a href="HTML_PAGES/works.html" class="cta-link">
-      <span data-fr="Voir tous les projets" data-en="View all projects">Voir tous les projets</span>
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
-    </a>
-  </article>
+    <!-- Photo col-3 -->
+    <section class="cell col-span" style="grid-column:span 3; padding:0; min-height:300px; background:#111110;">
+      <div class="mono" style="position:absolute; top:10px; left:12px; z-index:2; font-size:9px; letter-spacing:0.14em; color:#e8ff00; text-transform:uppercase;">[ PORTRAIT ]</div>
+      <div class="mono" style="position:absolute; bottom:10px; right:12px; z-index:2; font-size:9px; letter-spacing:0.14em; color:#e8e6dd; text-transform:uppercase;">JS_2026.JPG</div>
+      <img src="assets/joris.jpg" alt="Joris Suarez" style="width:100%; height:100%; object-fit:cover; display:block; min-height:300px;">
+    </section>
 
-  <!-- GitHub -->
-  <article class="card card-github col-4 reveal" style="--delay:0.1s">
-    <span class="label">GitHub</span>
-    <p class="github-desc" data-fr="Mes projets open source et expérimentations." data-en="My open source projects and experiments.">Mes projets open source et expérimentations.</p>
-    <a href="https://github.com/suarezjoris" target="_blank" rel="noopener noreferrer" class="github-link">
-      <div class="gh-avatar">SJ</div>
+    <!-- Status col-4 -->
+    <section class="cell col-span" style="grid-column:span 4; padding:26px; min-height:300px; display:flex; flex-direction:column; justify-content:space-between; background:#111110; color:#e8e6dd;">
       <div>
-        <div class="gh-username">Suarez Joris</div>
-        <div class="gh-sub" data-fr="Voir mes repos" data-en="View my repos">Voir mes repos</div>
+        <div class="mono" style="display:flex; align-items:center; gap:8px; font-size:10px; letter-spacing:0.14em; color:#e8ff00; text-transform:uppercase; font-weight:700;">
+          <span style="width:9px; height:9px; border-radius:50%; background:#3ddc6e; box-shadow:0 0 0 4px rgba(61,220,110,0.2); flex-shrink:0;"></span>
+          <span data-fr="STATUT" data-en="STATUS">STATUT</span>
+        </div>
+        <p class="wide" style="margin:16px 0 0; font-size:clamp(22px,2.4vw,30px); line-height:1; text-transform:uppercase;" data-fr="Disponible" data-en="Available">Disponible</p>
+        <p style="margin:14px 0 0; font-size:14px; line-height:1.5; color:#9d9c8f; font-weight:500;" data-fr="Ouvert à des projets sélectionnés où la clarté et le soin comptent vraiment." data-en="Open to selected projects where clarity and craft genuinely matter.">Ouvert à des projets sélectionnés où la clarté et le soin comptent vraiment.</p>
       </div>
-      <svg class="gh-icon" viewBox="0 0 24 24" fill="currentColor">
-        <path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.386-1.332-1.755-1.332-1.755-1.087-.744.083-.729.083-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.807 1.305 3.492.997.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 21.795 24 17.295 24 12c0-6.63-5.37-12-12-12"/>
-      </svg>
-    </a>
-  </article>
-
-  <!-- Blog -->
-  <article class="card card-blog col-6 reveal" style="--delay:0.18s">
-    <span class="label">Blog</span>
-    <h2 class="card-blog-title" data-fr="Écrits & Réflexions" data-en="Writings & Thoughts">Écrits & Réflexions</h2>
-    <p class="card-blog-desc" data-fr="Je documente ce que j'apprends. Design, code, process, opinions." data-en="I document what I learn. Design, code, process, opinions.">Je documente ce que j'apprends. Design, code, process, opinions.</p>
-    <a href="HTML_PAGES/blogs.html" class="cta-link">
-      <span data-fr="Lire le blog" data-en="Read the blog">Lire le blog</span>
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
-    </a>
-  </article>
-
-  <!-- Stack -->
-  <article class="card card-stack col-6 reveal" style="--delay:0.22s">
-    <span class="label">Stack</span>
-    <div class="stack-cloud">
-      <a href="HTML_PAGES/works.html" class="tag tag-link">HTML5</a>
-      <a href="HTML_PAGES/works.html" class="tag tag-link">CSS3</a>
-      <a href="HTML_PAGES/works.html" class="tag tag-link">JavaScript</a>
-      <a href="HTML_PAGES/works.html" class="tag tag-link">TypeScript</a>
-      <a href="HTML_PAGES/works.html" class="tag tag-link">React</a>
-      <a href="HTML_PAGES/works.html" class="tag tag-link">Node.js</a>
-      <a href="HTML_PAGES/works.html" class="tag tag-link">Tailwind CSS</a>
-      <a href="HTML_PAGES/works.html" class="tag tag-link">Figma</a>
-      <a href="HTML_PAGES/works.html" class="tag tag-link">Supabase</a>
-      <a href="HTML_PAGES/works.html" class="tag tag-link">Rust</a>
-      <a href="HTML_PAGES/works.html" class="tag tag-link">Tauri</a>
-      <a href="HTML_PAGES/works.html" class="tag tag-link">Python</a>
-    </div>
-  </article>
-
-  <!-- About snippet -->
-  <article class="card card-about col-4 reveal" style="--delay:0.26s">
-    <span class="label" data-fr="À propos" data-en="About">À propos</span>
-    <p class="about-snip" data-fr="Développeur & designer depuis 2017, basé à Lyon. Je construis des interfaces que les gens aiment utiliser." data-en="Developer & designer since 2017, based in Lyon. I build interfaces people love to use.">Développeur & designer depuis 2017, basé à Lyon. Je construis des interfaces que les gens aiment utiliser.</p>
-    <a href="HTML_PAGES/about.html" class="cta-link">
-      <span data-fr="En savoir plus" data-en="Learn more">En savoir plus</span>
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
-    </a>
-  </article>
-
-  <!-- Social -->
-  <article class="card card-social col-4 reveal" style="--delay:0.3s">
-    <span class="label">Socials</span>
-    <div class="social-row">
-      <a href="https://www.instagram.com/suarezjoris/" target="_blank" rel="noopener noreferrer" class="social-chip">
-        <svg viewBox="0 0 24 24" fill="currentColor">
-          <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
-        </svg>
-        suarezjoris
+      <a href="HTML_PAGES/contact.html" class="mono cut" style="display:inline-flex; align-items:center; justify-content:space-between; gap:10px; background:#e8ff00; color:#111110; font-size:12px; font-weight:800; letter-spacing:0.1em; padding:13px 16px; text-transform:uppercase; margin-top:18px;">
+        <span data-fr="Me contacter" data-en="Contact me">Me contacter</span> <span>→</span>
       </a>
-      <a href="https://www.linkedin.com/in/joris-suarez-59164a35b/" target="_blank" rel="noopener noreferrer" class="social-chip">
-        <svg viewBox="0 0 24 24" fill="currentColor">
-          <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
-        </svg>
-        Joris Suarez
-      </a>
-    </div>
-  </article>
+    </section>
 
-  <!-- Lab -->
-  <article class="card card-lab col-4 reveal" style="--delay:0.34s">
-    <span class="label">Lab</span>
-    <h2 class="lab-title" data-fr="Expérimentations" data-en="Experiments">Expérimentations</h2>
-    <p class="lab-desc" data-fr="UI curiosities, CSS tricks et démos interactives." data-en="UI curiosities, CSS tricks and interactive demos.">UI curiosities, CSS tricks et démos interactives.</p>
-    <a href="HTML_PAGES/services.html" class="cta-link">
-      <span data-fr="Explorer" data-en="Explore">Explorer</span>
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+    <!-- ROW 2 -->
+
+    <!-- Current project col-8 -->
+    <section class="cell col-span" style="grid-column:span 8; padding:30px; min-height:230px; display:flex; flex-direction:column; justify-content:space-between;">
+      <div aria-hidden="true" class="wide" style="position:absolute; right:-2%; top:-30%; font-size:210px; line-height:0.7; color:rgba(255,77,15,0.08); pointer-events:none; transform-origin:right;">01</div>
+      <div style="position:relative;">
+        <div class="mono" style="font-size:10px; letter-spacing:0.16em; color:#c43a0c; text-transform:uppercase; font-weight:700;" data-fr="// PROJET EN COURS" data-en="// CURRENTLY BUILDING">// PROJET EN COURS</div>
+        <h2 class="wide" style="margin:12px 0 0; font-size:clamp(30px,4.4vw,52px); line-height:0.92; text-transform:uppercase;">Horizon<span style="color:#ff4d0f;">*</span></h2>
+        <p style="margin:14px 0 0; max-width:48ch; font-size:15px; line-height:1.5; color:#54524a; font-weight:500;" data-fr="Une plateforme pensée pour ceux qui cherchent l'inhabituel — interface nette, architecture solide, point de vue assumé." data-en="A platform built for those who seek the uncommon — clean interface, solid architecture, a real point of view.">Une plateforme pensée pour ceux qui cherchent l'inhabituel — interface nette, architecture solide, point de vue assumé.</p>
+      </div>
+      <div style="position:relative; display:flex; align-items:center; justify-content:space-between; gap:16px; flex-wrap:wrap; margin-top:20px;">
+        <div style="display:flex; gap:7px; flex-wrap:wrap;">
+          <span class="mono" style="border:2px solid #111110; font-size:11px; font-weight:600; letter-spacing:0.06em; padding:4px 10px; text-transform:uppercase;">React</span>
+          <span class="mono" style="border:2px solid #111110; font-size:11px; font-weight:600; letter-spacing:0.06em; padding:4px 10px; text-transform:uppercase;">Next.js</span>
+          <span class="mono" style="border:2px solid #111110; font-size:11px; font-weight:600; letter-spacing:0.06em; padding:4px 10px; text-transform:uppercase;">PostgreSQL</span>
+          <span class="mono" style="border:2px solid #111110; font-size:11px; font-weight:600; letter-spacing:0.06em; padding:4px 10px; text-transform:uppercase;">Design System</span>
+        </div>
+        <a href="HTML_PAGES/works.html" class="mono" style="display:inline-flex; align-items:center; gap:8px; font-size:12px; font-weight:800; letter-spacing:0.1em; text-transform:uppercase; border-bottom:3px solid #ff4d0f; padding-bottom:3px;" data-fr="Voir les works →" data-en="See works →">Voir les works →</a>
+      </div>
+    </section>
+
+    <!-- GitHub col-4 -->
+    <a href="https://github.com/suarezjoris" target="_blank" rel="noopener" class="cell col-span" style="grid-column:span 4; padding:26px; min-height:230px; display:flex; flex-direction:column; justify-content:space-between; background:#e8ff00;">
+      <div aria-hidden="true" class="wide" style="position:absolute; right:-6%; bottom:-22%; font-size:160px; line-height:0.7; color:rgba(17,17,16,0.08); pointer-events:none; transform-origin:right;">{ }</div>
+      <div class="mono" style="position:relative; font-size:10px; letter-spacing:0.16em; text-transform:uppercase; font-weight:700;">[ GITHUB ]</div>
+      <div style="position:relative;">
+        <div class="wide" style="font-size:26px; text-transform:uppercase; line-height:1;">@suarezjoris</div>
+        <div class="mono" style="margin-top:10px; font-size:12px; font-weight:600; display:inline-flex; align-items:center; gap:8px;">
+          <span data-fr="Voir le profil" data-en="View profile">Voir le profil</span> <span>↗</span>
+        </div>
+      </div>
     </a>
-  </article>
 
+    <!-- ROW 3 -->
+
+    <!-- Blog col-6 -->
+    <a href="HTML_PAGES/blogs.html" class="cell col-span" style="grid-column:span 6; padding:30px; min-height:200px; display:flex; flex-direction:column; justify-content:space-between; background:#111110; color:#e8e6dd;">
+      <div class="mono" style="font-size:10px; letter-spacing:0.16em; color:#e8ff00; text-transform:uppercase; font-weight:700;">[ JOURNAL ]</div>
+      <div>
+        <h2 class="wide" style="margin:0; font-size:clamp(28px,3.6vw,44px); line-height:0.92; text-transform:uppercase;" data-fr="Le Blog." data-en="The Blog.">Le Blog.</h2>
+        <p style="margin:12px 0 0; max-width:40ch; font-size:14px; line-height:1.5; color:#9d9c8f; font-weight:500;" data-fr="Notes sur le craft, la philosophie du code et l'industrie. Voix calme, idées tranchées." data-en="Notes on craft, the philosophy of code, and the industry. Calm voice, sharp ideas.">Notes sur le craft, la philosophie du code et l'industrie. Voix calme, idées tranchées.</p>
+      </div>
+      <div class="mono" style="font-size:12px; font-weight:800; letter-spacing:0.1em; text-transform:uppercase; color:#e8ff00;" data-fr="Lire →" data-en="Read →">Lire →</div>
+    </a>
+
+    <!-- Stack col-6 -->
+    <section class="cell col-span" style="grid-column:span 6; padding:30px; min-height:200px;">
+      <div class="mono" style="font-size:10px; letter-spacing:0.16em; color:#c43a0c; text-transform:uppercase; font-weight:700; margin-bottom:18px;">
+        [ STACK ] — <span data-fr="12 TECHNOS" data-en="12 TECHS">12 TECHNOS</span>
+      </div>
+      <div style="display:flex; flex-wrap:wrap; gap:8px;">
+        <span class="mono cut" style="background:#e8ff00; color:#111110; border:2px solid #111110; font-size:12px; font-weight:700; letter-spacing:0.04em; padding:6px 12px; text-transform:uppercase;">React</span>
+        <span class="mono cut" style="background:transparent; color:#111110; border:2px solid #111110; font-size:12px; font-weight:700; letter-spacing:0.04em; padding:6px 12px; text-transform:uppercase;">TypeScript</span>
+        <span class="mono cut" style="background:#e8ff00; color:#111110; border:2px solid #111110; font-size:12px; font-weight:700; letter-spacing:0.04em; padding:6px 12px; text-transform:uppercase;">Next.js</span>
+        <span class="mono cut" style="background:transparent; color:#111110; border:2px solid #111110; font-size:12px; font-weight:700; letter-spacing:0.04em; padding:6px 12px; text-transform:uppercase;">Node</span>
+        <span class="mono cut" style="background:transparent; color:#111110; border:2px solid #111110; font-size:12px; font-weight:700; letter-spacing:0.04em; padding:6px 12px; text-transform:uppercase;">Tailwind</span>
+        <span class="mono cut" style="background:transparent; color:#111110; border:2px solid #111110; font-size:12px; font-weight:700; letter-spacing:0.04em; padding:6px 12px; text-transform:uppercase;">Framer</span>
+        <span class="mono cut" style="background:#ff4d0f; color:#111110; border:2px solid #111110; font-size:12px; font-weight:700; letter-spacing:0.04em; padding:6px 12px; text-transform:uppercase;">PostgreSQL</span>
+        <span class="mono cut" style="background:transparent; color:#111110; border:2px solid #111110; font-size:12px; font-weight:700; letter-spacing:0.04em; padding:6px 12px; text-transform:uppercase;">Figma</span>
+        <span class="mono cut" style="background:transparent; color:#111110; border:2px solid #111110; font-size:12px; font-weight:700; letter-spacing:0.04em; padding:6px 12px; text-transform:uppercase;">GSAP</span>
+        <span class="mono cut" style="background:#ff4d0f; color:#111110; border:2px solid #111110; font-size:12px; font-weight:700; letter-spacing:0.04em; padding:6px 12px; text-transform:uppercase;">Three.js</span>
+        <span class="mono cut" style="background:transparent; color:#111110; border:2px solid #111110; font-size:12px; font-weight:700; letter-spacing:0.04em; padding:6px 12px; text-transform:uppercase;">Vite</span>
+        <span class="mono cut" style="background:transparent; color:#111110; border:2px solid #111110; font-size:12px; font-weight:700; letter-spacing:0.04em; padding:6px 12px; text-transform:uppercase;">Git</span>
+      </div>
+    </section>
+
+    <!-- ROW 4 -->
+
+    <!-- About col-4 -->
+    <a href="HTML_PAGES/about.html" class="cell col-span" style="grid-column:span 4; padding:26px; min-height:190px; display:flex; flex-direction:column; justify-content:space-between;">
+      <div class="mono" style="font-size:10px; letter-spacing:0.16em; color:#c43a0c; text-transform:uppercase; font-weight:700;" data-fr="[ À PROPOS ]" data-en="[ ABOUT ]">[ À PROPOS ]</div>
+      <p style="margin:14px 0; font-size:15px; line-height:1.5; color:#33322c; font-weight:600;" data-fr="Self-made, discipliné, curieux. Je cherche la clarté et la qualité dans tout ce que je construis." data-en="Self-made, disciplined, curious. I chase clarity and quality in everything I build.">Self-made, discipliné, curieux. Je cherche la clarté et la qualité dans tout ce que je construis.</p>
+      <div class="mono" style="font-size:12px; font-weight:800; letter-spacing:0.1em; text-transform:uppercase; border-bottom:3px solid #111110; padding-bottom:3px; align-self:flex-start;" data-fr="En savoir plus →" data-en="Learn more →">En savoir plus →</div>
+    </a>
+
+    <!-- Socials col-4 -->
+    <section class="cell col-span" style="grid-column:span 4; padding:0; min-height:190px; display:flex; flex-direction:column;">
+      <div class="mono" style="padding:14px 20px 0; font-size:10px; letter-spacing:0.16em; color:#c43a0c; text-transform:uppercase; font-weight:700;">[ SOCIALS ]</div>
+      <a href="https://www.instagram.com/suarezjoris/" target="_blank" rel="noopener" style="flex:1; display:flex; align-items:center; justify-content:space-between; padding:14px 20px; border-bottom:2px solid #111110; transition:background .15s;" onmouseover="this.style.background='#e8ff00'" onmouseout="this.style.background='transparent'">
+        <span class="wide" style="font-size:22px; text-transform:uppercase;">Instagram</span><span class="mono" style="font-size:14px;">↗</span>
+      </a>
+      <a href="https://www.linkedin.com/in/joris-suarez-59164a35b/" target="_blank" rel="noopener" style="flex:1; display:flex; align-items:center; justify-content:space-between; padding:14px 20px; transition:background .15s;" onmouseover="this.style.background='#e8ff00'" onmouseout="this.style.background='transparent'">
+        <span class="wide" style="font-size:22px; text-transform:uppercase;">LinkedIn</span><span class="mono" style="font-size:14px;">↗</span>
+      </a>
+    </section>
+
+    <!-- Lab col-4 -->
+    <a href="HTML_PAGES/lab.html" class="cell col-span" style="grid-column:span 4; padding:26px; min-height:190px; display:flex; flex-direction:column; justify-content:space-between; background:#ff4d0f; color:#111110;">
+      <div aria-hidden="true" class="wide" style="position:absolute; right:-4%; bottom:-26%; font-size:150px; line-height:0.7; color:rgba(17,17,16,0.1); pointer-events:none; transform-origin:right;">↗</div>
+      <div class="mono" style="position:relative; font-size:10px; letter-spacing:0.16em; text-transform:uppercase; font-weight:700;">[ EXPERIMENTAL ]</div>
+      <div style="position:relative;">
+        <h2 class="wide" style="margin:0; font-size:clamp(28px,3.4vw,40px); line-height:0.92; text-transform:uppercase;" data-fr="Le Lab." data-en="The Lab.">Le Lab.</h2>
+        <p style="margin:10px 0 0; font-size:13px; line-height:1.5; font-weight:600;" data-fr="Expérimentations visuelles & techniques." data-en="Visual & technical experiments.">Expérimentations visuelles & techniques.</p>
+      </div>
+      <div class="mono" style="position:relative; font-size:12px; font-weight:800; letter-spacing:0.1em; text-transform:uppercase; margin-top:14px;" data-fr="Explorer →" data-en="Explore →">Explorer →</div>
+    </a>
+
+  </div>
 </main>
 
-<!-- DOCK -->
-<nav class="dock" aria-label="Navigation principale">
-  <a href="index.html" class="dock-item active" aria-label="Accueil">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75">
-      <path d="M3 10.5L12 3l9 7.5V20a1 1 0 01-1 1H4a1 1 0 01-1-1v-9.5z"/><path d="M9 21V12h6v9"/>
-    </svg>
-    <span class="dock-tooltip" data-fr="Accueil" data-en="Home">Accueil</span>
-  </a>
-  <a href="HTML_PAGES/works.html" class="dock-item" aria-label="Travaux">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75">
-      <rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/>
-      <rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/>
-    </svg>
-    <span class="dock-tooltip" data-fr="Travaux" data-en="Works">Travaux</span>
-  </a>
-  <a href="HTML_PAGES/blogs.html" class="dock-item" aria-label="Blog">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75">
-      <path d="M4 6h16M4 10h16M4 14h10M4 18h7"/>
-    </svg>
-    <span class="dock-tooltip">Blog</span>
-  </a>
-  <a href="HTML_PAGES/about.html" class="dock-item" aria-label="À propos">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75">
-      <circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.582-7 8-7s8 3 8 7"/>
-    </svg>
-    <span class="dock-tooltip" data-fr="À propos" data-en="About">À propos</span>
-  </a>
-  <a href="HTML_PAGES/services.html" class="dock-item" aria-label="Lab">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75">
-      <path d="M9 3h6v8l3.5 9H5.5L9 11V3z"/><path d="M6.5 18.5h11"/>
-    </svg>
-    <span class="dock-tooltip">Lab</span>
-  </a>
-  <a href="HTML_PAGES/contact.html" class="dock-item" aria-label="Contact">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75">
-      <rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 7l10 7 10-7"/>
-    </svg>
-    <span class="dock-tooltip">Contact</span>
-  </a>
-  <div class="dock-sep" aria-hidden="true"></div>
-  <button class="dock-item" id="lang-btn" aria-label="Changer de langue">
-    <span class="dock-lang" id="lang-display">FR</span>
-    <span class="dock-tooltip" id="lang-tip">Switch to English</span>
-  </button>
+<!-- FLOATING DOCK -->
+<nav style="position:fixed; left:50%; bottom:20px; transform:translateX(-50%); z-index:70; display:flex; align-items:stretch; gap:2px; background:#111110; border:2px solid #111110; box-shadow:6px 6px 0 rgba(17,17,16,0.25);">
+  <a href="index.html" class="mono" style="display:flex; align-items:center; padding:11px 15px; font-size:11px; font-weight:800; letter-spacing:0.08em; text-transform:uppercase; background:#e8ff00; color:#111110;" data-fr="Accueil" data-en="Home">Accueil</a>
+  <a href="HTML_PAGES/about.html" class="mono" id="nav-about" style="display:flex; align-items:center; padding:11px 15px; font-size:11px; font-weight:700; letter-spacing:0.08em; text-transform:uppercase; color:#e8e6dd;" onmouseover="this.style.color='#e8ff00'" onmouseout="this.style.color='#e8e6dd'" data-fr="À propos" data-en="About">À propos</a>
+  <a href="HTML_PAGES/works.html" class="mono" style="display:flex; align-items:center; padding:11px 15px; font-size:11px; font-weight:700; letter-spacing:0.08em; text-transform:uppercase; color:#e8e6dd;" onmouseover="this.style.color='#e8ff00'" onmouseout="this.style.color='#e8e6dd'">Works</a>
+  <a href="HTML_PAGES/blogs.html" class="mono" style="display:flex; align-items:center; padding:11px 15px; font-size:11px; font-weight:700; letter-spacing:0.08em; text-transform:uppercase; color:#e8e6dd;" onmouseover="this.style.color='#e8ff00'" onmouseout="this.style.color='#e8e6dd'">Blog</a>
+  <a href="HTML_PAGES/lab.html" class="mono" style="display:flex; align-items:center; padding:11px 15px; font-size:11px; font-weight:700; letter-spacing:0.08em; text-transform:uppercase; color:#e8e6dd;" onmouseover="this.style.color='#e8ff00'" onmouseout="this.style.color='#e8e6dd'">Lab</a>
+  <a href="HTML_PAGES/contact.html" class="mono" style="display:flex; align-items:center; padding:11px 15px; font-size:11px; font-weight:700; letter-spacing:0.08em; text-transform:uppercase; color:#e8e6dd;" onmouseover="this.style.color='#e8ff00'" onmouseout="this.style.color='#e8e6dd'" data-fr="Contact" data-en="Contact">Contact</a>
+  <button id="lang-btn" class="mono" style="display:flex; align-items:center; padding:11px 14px; font-size:11px; font-weight:800; letter-spacing:0.08em; text-transform:uppercase; background:#ff4d0f; color:#111110; border:none; cursor:pointer;">FR</button>
 </nav>
 
 <script>
-  function toggleLang() {
-    const cur = localStorage.getItem('siteLang') || 'fr';
-    const next = cur === 'fr' ? 'en' : 'fr';
-    applyLang(next);
-    localStorage.setItem('siteLang', next);
-  }
-
   function applyLang(lang) {
     document.querySelectorAll('[data-fr][data-en]').forEach(el => {
       el.textContent = el.getAttribute('data-' + lang);
     });
     document.documentElement.lang = lang;
-    const d = document.getElementById('lang-display');
-    const t = document.getElementById('lang-tip');
-    if (d) d.textContent = lang.toUpperCase();
-    if (t) t.textContent = lang === 'fr' ? 'Switch to English' : 'Passer en français';
+    const btn = document.getElementById('lang-btn');
+    if (btn) btn.textContent = lang === 'fr' ? 'EN' : 'FR';
   }
-
-  const revealObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-        revealObserver.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.08 });
 
   document.addEventListener('DOMContentLoaded', () => {
     const lang = localStorage.getItem('siteLang') || 'fr';
     applyLang(lang);
-    document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
-    document.getElementById('lang-btn').addEventListener('click', toggleLang);
+    document.getElementById('lang-btn').addEventListener('click', () => {
+      const cur = localStorage.getItem('siteLang') || 'fr';
+      const next = cur === 'fr' ? 'en' : 'fr';
+      localStorage.setItem('siteLang', next);
+      applyLang(next);
+    });
   });
 </script>
 </body>

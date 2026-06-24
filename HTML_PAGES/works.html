@@ -3,242 +3,150 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Works — Joris Suarez</title>
+  <title>Joris Suarez — Works</title>
   <link rel="icon" type="image/svg+xml" href="../favicon.svg">
-  <link rel="stylesheet" href="../styles.css">
-  <link rel="stylesheet" href="../css/works.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <style>
+    body { margin:0; background:#e8e6dd; color:#111110; font-family:'Archivo',sans-serif; -webkit-font-smoothing:antialiased; }
+    * { box-sizing:border-box; }
+    ::selection { background:#e8ff00; color:#111110; }
+    a { color:inherit; text-decoration:none; }
+    .mono { font-family:'JetBrains Mono',monospace; }
+    .wide { font-weight:900; transform:scaleX(1.04); transform-origin:left; display:inline-block; }
+    .cut { clip-path:polygon(0 0,100% 0,100% calc(100% - 9px),calc(100% - 9px) 100%,0 100%); }
+    .stripeY { background:repeating-linear-gradient(-45deg,#111110 0 12px,#e8ff00 12px 24px); }
+    .repo { transition:transform .18s ease, box-shadow .18s ease; }
+    .repo:hover { transform:translateY(-3px); box-shadow:7px 7px 0 #111110; }
+    @keyframes spin { to { transform:rotate(360deg); } }
+  </style>
 </head>
 <body>
 
-<div class="works-layout">
-
-  <aside class="works-sidebar">
-    <div class="works-sidebar-inner reveal" style="--delay:0s">
-      <span class="label" data-fr="Mes projets" data-en="My projects">Mes projets</span>
-      <h1 class="works-headline">Works</h1>
-      <p class="works-desc" data-fr="Projets open source et contributions GitHub." data-en="Open source projects and GitHub contributions.">Projets open source et contributions GitHub.</p>
-
-      <a href="https://github.com/suarezjoris" target="_blank" rel="noopener noreferrer" class="card gh-profile-card">
-        <div class="gh-profile-top">
-          <div class="gh-avatar">
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
-          </div>
-          <div class="gh-info">
-            <span class="gh-username">Suarez Joris</span>
-            <span class="gh-label">GitHub</span>
-          </div>
-        </div>
-        <div class="gh-cta">
-          <span data-fr="Voir le profil" data-en="View profile">Voir le profil</span>
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
-        </div>
-      </a>
-    </div>
-  </aside>
-
-  <main class="works-main">
-    <div class="projects-grid" id="projects-container">
-      <div class="loading-state" id="loading-state">
-        <div class="loading-ring"></div>
-        <span data-fr="Chargement..." data-en="Loading...">Chargement...</span>
-      </div>
-      <div class="error-state hidden" id="error-state">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="28" height="28"><circle cx="12" cy="12" r="10"/><path d="M12 8v4m0 4h.01"/></svg>
-        <p data-fr="Impossible de charger les projets" data-en="Failed to load projects">Impossible de charger les projets</p>
-        <button class="btn-primary" id="retry-btn" data-fr="Réessayer" data-en="Retry">Réessayer</button>
-      </div>
-    </div>
-  </main>
-
+<!-- HUD RAIL -->
+<div class="mono" style="display:flex; justify-content:space-between; align-items:center; gap:12px; padding:8px clamp(16px,4vw,40px); background:#111110; color:#8a897d; font-size:9.5px; letter-spacing:0.16em; text-transform:uppercase;">
+  <span style="color:#e8ff00;">◢◤</span>
+  <span style="color:#e8e6dd;">&ldquo;WORKS&rdquo; — INDEX_03</span>
+  <span style="flex:1; height:2px; background:repeating-linear-gradient(90deg,#34342b 0 5px,transparent 5px 10px);"></span>
+  <span style="color:#ff4d0f;">LIVE</span>
+  <span style="color:#e8ff00;">◢◤</span>
 </div>
 
-<nav class="dock" aria-label="Navigation">
-  <a href="../index.html" class="dock-item" aria-label="Accueil">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M3 10.5L12 3l9 7.5V20a1 1 0 01-1 1H4a1 1 0 01-1-1v-9.5z"/><path d="M9 21V12h6v9"/></svg>
-    <span class="dock-tooltip" data-fr="Accueil" data-en="Home">Accueil</span>
-  </a>
-  <a href="works.html" class="dock-item active" aria-label="Travaux">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg>
-    <span class="dock-tooltip" data-fr="Travaux" data-en="Works">Travaux</span>
-  </a>
-  <a href="blogs.html" class="dock-item" aria-label="Blog">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M4 6h16M4 10h16M4 14h10M4 18h7"/></svg>
-    <span class="dock-tooltip">Blog</span>
-  </a>
-  <a href="about.html" class="dock-item" aria-label="À propos">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.582-7 8-7s8 3 8 7"/></svg>
-    <span class="dock-tooltip" data-fr="À propos" data-en="About">À propos</span>
-  </a>
-  <a href="services.html" class="dock-item" aria-label="Lab">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M9 3h6v8l3.5 9H5.5L9 11V3z"/><path d="M6.5 18.5h11"/></svg>
-    <span class="dock-tooltip">Lab</span>
-  </a>
-  <a href="contact.html" class="dock-item" aria-label="Contact">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 7l10 7 10-7"/></svg>
-    <span class="dock-tooltip">Contact</span>
-  </a>
-  <div class="dock-sep" aria-hidden="true"></div>
-  <button class="dock-item" id="lang-btn" aria-label="Changer de langue">
-    <span class="dock-lang" id="lang-display">FR</span>
-    <span class="dock-tooltip" id="lang-tip">Switch to English</span>
-  </button>
+<main style="max-width:1180px; margin:0 auto; padding:clamp(40px,7vw,90px) clamp(16px,4vw,40px) 150px;">
+
+  <header style="position:relative; margin-bottom:40px;">
+    <div aria-hidden="true" class="wide" style="position:absolute; right:-2%; top:-26%; font-size:min(40vw,340px); line-height:0.7; color:rgba(17,17,16,0.05); pointer-events:none; transform-origin:right;">W</div>
+    <div style="display:flex; align-items:flex-end; justify-content:space-between; gap:20px; flex-wrap:wrap;">
+      <div>
+        <div class="mono" style="font-size:11px; letter-spacing:0.24em; color:#c43a0c; text-transform:uppercase; font-weight:700; margin-bottom:16px;" id="eyebrow">// DÉPÔTS PUBLICS</div>
+        <h1 class="wide" style="margin:0; font-size:clamp(48px,9vw,120px); line-height:0.86; text-transform:uppercase;">Works<span style="color:#ff4d0f;">*</span></h1>
+        <p style="margin:20px 0 0; max-width:50ch; font-size:clamp(15px,1.8vw,19px); line-height:1.55; color:#33322c; font-weight:500;" id="sub-text">Une sélection vivante de mes dépôts, chargée en direct depuis l'API GitHub. Triée par étoiles puis activité récente.</p>
+      </div>
+      <a href="https://github.com/suarezjoris" target="_blank" rel="noopener" class="mono cut" style="display:inline-flex; align-items:center; gap:9px; background:#111110; color:#e8ff00; font-size:12px; font-weight:800; letter-spacing:0.08em; padding:13px 18px; text-transform:uppercase;">@suarezjoris ↗</a>
+    </div>
+  </header>
+
+  <div class="stripeY" aria-hidden="true" style="height:16px; margin-bottom:40px;"></div>
+
+  <div id="state-loading" style="display:flex; flex-direction:column; align-items:center; justify-content:center; padding:80px 0; gap:20px;">
+    <div style="width:42px; height:42px; border:4px solid #111110; border-top-color:#ff4d0f; border-radius:50%; animation:spin 0.8s linear infinite;"></div>
+    <div class="mono" id="loading-text" style="font-size:12px; letter-spacing:0.2em; text-transform:uppercase; color:#54524a;">CHARGEMENT DES DÉPÔTS…</div>
+  </div>
+
+  <div id="state-error" style="display:none;">
+    <div class="cut" style="background:#111110; color:#e8e6dd; padding:40px; text-align:center;">
+      <div class="wide" id="err-title" style="font-size:clamp(28px,4vw,42px); text-transform:uppercase; color:#ff4d0f; margin-bottom:10px;">Erreur</div>
+      <p id="err-msg" style="margin:0 0 24px; font-size:15px; color:#9d9c8f; font-weight:500;"></p>
+      <button onclick="fetchRepos()" class="mono cut" id="retry-btn" style="background:#e8ff00; color:#111110; border:none; font-size:12px; font-weight:800; letter-spacing:0.1em; padding:13px 22px; text-transform:uppercase; cursor:pointer;">↻ Réessayer</button>
+    </div>
+  </div>
+
+  <div id="state-loaded" style="display:none;">
+    <div id="repos-grid" style="display:grid; grid-template-columns:repeat(auto-fill,minmax(310px,1fr)); gap:16px;"></div>
+  </div>
+
+</main>
+
+<!-- DOCK -->
+<nav style="position:fixed; left:50%; bottom:20px; transform:translateX(-50%); z-index:70; display:flex; align-items:stretch; gap:2px; background:#111110; border:2px solid #111110; box-shadow:6px 6px 0 rgba(17,17,16,0.25);">
+  <a href="../index.html" class="mono" style="display:flex; align-items:center; padding:11px 15px; font-size:11px; font-weight:700; letter-spacing:0.08em; text-transform:uppercase; color:#e8e6dd;" onmouseover="this.style.color='#e8ff00'" onmouseout="this.style.color='#e8e6dd'" data-fr="Accueil" data-en="Home">Accueil</a>
+  <a href="about.html" class="mono" style="display:flex; align-items:center; padding:11px 15px; font-size:11px; font-weight:700; letter-spacing:0.08em; text-transform:uppercase; color:#e8e6dd;" onmouseover="this.style.color='#e8ff00'" onmouseout="this.style.color='#e8e6dd'" data-fr="À propos" data-en="About">À propos</a>
+  <a href="works.html" class="mono" style="display:flex; align-items:center; padding:11px 15px; font-size:11px; font-weight:800; letter-spacing:0.08em; text-transform:uppercase; background:#e8ff00; color:#111110;">Works</a>
+  <a href="blogs.html" class="mono" style="display:flex; align-items:center; padding:11px 15px; font-size:11px; font-weight:700; letter-spacing:0.08em; text-transform:uppercase; color:#e8e6dd;" onmouseover="this.style.color='#e8ff00'" onmouseout="this.style.color='#e8e6dd'">Blog</a>
+  <a href="lab.html" class="mono" style="display:flex; align-items:center; padding:11px 15px; font-size:11px; font-weight:700; letter-spacing:0.08em; text-transform:uppercase; color:#e8e6dd;" onmouseover="this.style.color='#e8ff00'" onmouseout="this.style.color='#e8e6dd'">Lab</a>
+  <a href="contact.html" class="mono" style="display:flex; align-items:center; padding:11px 15px; font-size:11px; font-weight:700; letter-spacing:0.08em; text-transform:uppercase; color:#e8e6dd;" onmouseover="this.style.color='#e8ff00'" onmouseout="this.style.color='#e8e6dd'" data-fr="Contact" data-en="Contact">Contact</a>
+  <button id="lang-btn" class="mono" style="display:flex; align-items:center; padding:11px 14px; font-size:11px; font-weight:800; letter-spacing:0.08em; text-transform:uppercase; background:#ff4d0f; color:#111110; border:none; cursor:pointer;">FR</button>
 </nav>
 
 <script>
-  const GITHUB_USERNAME = 'suarezjoris';
-  const REPOS_PER_PAGE = 100;
-
-  const languageColors = {
-    'JavaScript': '#f1e05a',
-    'TypeScript': '#3178c6',
-    'Python': '#3572A5',
-    'HTML': '#e34c26',
-    'CSS': '#563d7c',
-    'C++': '#f34b7d',
-    'C': '#555555',
-    'Java': '#b07219',
-    'Go': '#00ADD8',
-    'Rust': '#dea584',
-    'Ruby': '#701516',
-    'PHP': '#4F5D95',
-    'Swift': '#ffac45',
-    'Kotlin': '#A97BFF',
-    'Shell': '#89e051',
-    'Vue': '#41b883',
-    'Dart': '#00B4AB',
-    'Lua': '#000080',
-    'SCSS': '#c6538c',
-    'default': '#8b949e'
+  const langColors = { JavaScript:'#e8ff00', TypeScript:'#3178c6', Python:'#3ddc6e', HTML:'#ff4d0f', CSS:'#a06bff', Vue:'#41b883', Shell:'#89e051', Java:'#b07219', Go:'#00add8', PHP:'#777bb4', Rust:'#dea584', Dart:'#00b4ab', 'C':'#555555', 'C++':'#f34b7d', Ruby:'#cc342d' };
+  const i18n = {
+    fr: { eyebrow:'// DÉPÔTS PUBLICS', sub:'Une sélection vivante de mes dépôts, chargée en direct depuis l\'API GitHub. Triée par étoiles puis activité récente.', loading:'CHARGEMENT DES DÉPÔTS…', errTitle:'Erreur', retry:'Réessayer' },
+    en: { eyebrow:'// PUBLIC REPOS', sub:'A living selection of my repositories, loaded live from the GitHub API. Sorted by stars then recent activity.', loading:'LOADING REPOSITORIES…', errTitle:'Error', retry:'Retry' }
   };
-
-  async function loadGitHubRepos() {
-    const container = document.getElementById('projects-container');
-    const loadingState = document.getElementById('loading-state');
-    const errorState = document.getElementById('error-state');
-
-    loadingState.classList.remove('hidden');
-    errorState.classList.add('hidden');
-    container.querySelectorAll('.project-card').forEach(c => c.remove());
-
-    try {
-      const response = await fetch(
-        `https://api.github.com/users/${GITHUB_USERNAME}/repos?per_page=${REPOS_PER_PAGE}`
-      );
-      if (!response.ok) throw new Error(`GitHub API error: ${response.status}`);
-      const repos = (await response.json()).sort((a, b) => b.stargazers_count - a.stargazers_count);
-      loadingState.classList.add('hidden');
-
-      if (repos.length === 0) {
-        const empty = document.createElement('p');
-        empty.className = 'empty-text';
-        empty.setAttribute('data-fr', 'Aucun projet public trouvé');
-        empty.setAttribute('data-en', 'No public projects found');
-        empty.textContent = 'Aucun projet public trouvé';
-        container.appendChild(empty);
-        reapplyLanguage();
-        return;
-      }
-
-      repos.forEach((repo, index) => {
-        const card = createProjectCard(repo, index);
-        container.appendChild(card);
-      });
-
-      document.querySelectorAll('.project-card.reveal').forEach(el => ro.observe(el));
-      reapplyLanguage();
-    } catch (error) {
-      console.error('Failed to fetch GitHub repos:', error);
-      loadingState.classList.add('hidden');
-      errorState.classList.remove('hidden');
-    }
-  }
-
-  function escapeHtml(str) {
-    return String(str)
-      .replace(/&/g, '&amp;')
-      .replace(/</g, '&lt;')
-      .replace(/>/g, '&gt;')
-      .replace(/"/g, '&quot;')
-      .replace(/'/g, '&#39;');
-  }
-
-  function safeUrl(url) {
-    return (typeof url === 'string' && url.startsWith('https://')) ? url : '#';
-  }
-
-  function createProjectCard(repo, index) {
-    const card = document.createElement('article');
-    card.className = 'project-card card reveal';
-    card.style.setProperty('--delay', `${Math.min(index * 0.04, 0.6)}s`);
-
-    const language = repo.language || 'default';
-    const langColor = languageColors[language] || languageColors['default'];
-    const savedLang = localStorage.getItem('siteLang') || 'fr';
-
-    const rawDesc = repo.description
-      ? (repo.description.length > 110 ? repo.description.substring(0, 110) + '\u2026' : repo.description)
-      : (savedLang === 'fr' ? 'Projet GitHub' : 'GitHub project');
-
-    card.innerHTML = `
-      <div class="project-body">
-        <h3 class="project-title">${escapeHtml(repo.name)}</h3>
-        <p class="project-desc">${escapeHtml(rawDesc)}</p>
-        <div class="project-meta">
-          ${repo.language ? `<span class="meta-lang"><span class="lang-dot" style="background:${langColor}"></span>${escapeHtml(repo.language)}</span>` : ''}
-          <span class="meta-stat">
-            <svg viewBox="0 0 16 16" fill="currentColor" width="11" height="11"><path d="M8 .25a.75.75 0 01.673.418l1.882 3.815 4.21.612a.75.75 0 01.416 1.279l-3.046 2.97.719 4.192a.75.75 0 01-1.088.791L8 12.347l-3.766 1.98a.75.75 0 01-1.088-.79l.72-4.194L.818 6.374a.75.75 0 01.416-1.28l4.21-.611L7.327.668A.75.75 0 018 .25z"/></svg>
-            ${parseInt(repo.stargazers_count, 10) || 0}
-          </span>
-          <span class="meta-stat">
-            <svg viewBox="0 0 16 16" fill="currentColor" width="11" height="11"><path d="M5 3.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm0 2.122a2.25 2.25 0 10-1.5 0v.878A2.25 2.25 0 005.75 8.5h1.5v2.128a2.251 2.251 0 101.5 0V8.5h1.5a2.25 2.25 0 002.25-2.25v-.878a2.25 2.25 0 10-1.5 0v.878a.75.75 0 01-.75.75h-4.5A.75.75 0 015 6.25v-.878zm3.75 7.378a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm3-8.75a.75.75 0 100-1.5.75.75 0 000 1.5z"/></svg>
-            ${parseInt(repo.forks_count, 10) || 0}
-          </span>
-        </div>
-        ${repo.topics && repo.topics.length > 0
-          ? `<div class="project-tags">${repo.topics.slice(0, 4).map(t => `<span class="tag">${escapeHtml(t)}</span>`).join('')}</div>`
-          : (repo.language ? `<div class="project-tags"><span class="tag">${escapeHtml(repo.language)}</span></div>` : '')
-        }
-      </div>
-      <a href="${safeUrl(repo.html_url)}" target="_blank" rel="noopener noreferrer" class="project-link" aria-label="Open ${escapeHtml(repo.name)} on GitHub">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
-      </a>
-    `;
-
-    return card;
-  }
-
-  function reapplyLanguage() {
-    applyLang(localStorage.getItem('siteLang') || 'fr');
-  }
-
-  function toggleLang() {
-    const cur = localStorage.getItem('siteLang') || 'fr';
-    const next = cur === 'fr' ? 'en' : 'fr';
-    applyLang(next);
-    localStorage.setItem('siteLang', next);
-  }
+  let currentLang = 'fr';
 
   function applyLang(lang) {
-    document.querySelectorAll('[data-fr][data-en]').forEach(el => {
-      el.textContent = el.getAttribute('data-' + lang);
-    });
+    currentLang = lang;
+    document.querySelectorAll('[data-fr][data-en]').forEach(el => { el.textContent = el.getAttribute('data-' + lang); });
     document.documentElement.lang = lang;
-    const d = document.getElementById('lang-display');
-    const t = document.getElementById('lang-tip');
-    if (d) d.textContent = lang.toUpperCase();
-    if (t) t.textContent = lang === 'fr' ? 'Switch to English' : 'Passer en français';
+    const btn = document.getElementById('lang-btn');
+    if (btn) btn.textContent = lang === 'fr' ? 'EN' : 'FR';
+    const t = i18n[lang];
+    document.getElementById('eyebrow').textContent = t.eyebrow;
+    document.getElementById('sub-text').textContent = t.sub;
+    document.getElementById('loading-text').textContent = t.loading;
+    document.getElementById('err-title').textContent = t.errTitle;
+    document.getElementById('retry-btn').textContent = '↻ ' + t.retry;
   }
 
-  const ro = new IntersectionObserver((entries) => {
-    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); ro.unobserve(e.target); } });
-  }, { threshold: 0.08 });
+  function fetchRepos() {
+    document.getElementById('state-loading').style.display = 'flex';
+    document.getElementById('state-error').style.display = 'none';
+    document.getElementById('state-loaded').style.display = 'none';
+    fetch('https://api.github.com/users/suarezjoris/repos?sort=updated&per_page=30')
+      .then(res => { if (!res.ok) throw new Error('HTTP ' + res.status + (res.status === 403 ? ' — rate limit' : '')); return res.json(); })
+      .then(data => {
+        if (!Array.isArray(data)) throw new Error('Unexpected response');
+        const repos = data.filter(r => !r.fork).sort((a, b) => (b.stargazers_count - a.stargazers_count) || (new Date(b.updated_at) - new Date(a.updated_at)));
+        const grid = document.getElementById('repos-grid');
+        grid.innerHTML = repos.map((r, i) => {
+          const color = langColors[r.language] || '#8a897d';
+          return `<a href="${r.html_url}" target="_blank" rel="noopener" class="repo cut" style="border:2px solid #111110; background:#e8e6dd; padding:22px; display:flex; flex-direction:column; min-height:190px;">
+            <div style="display:flex; align-items:flex-start; justify-content:space-between; gap:10px;">
+              <span class="mono" style="font-size:10px; letter-spacing:0.1em; color:#c43a0c; text-transform:uppercase; font-weight:700;">R_${String(i+1).padStart(2,'0')}</span>
+              <span class="mono" style="font-size:13px;">↗</span>
+            </div>
+            <div class="wide" style="margin-top:14px; font-size:22px; text-transform:uppercase; line-height:0.95; word-break:break-word;">${r.name}</div>
+            <p style="margin:10px 0 0; flex:1; font-size:13.5px; line-height:1.5; color:#54524a; font-weight:500;">${r.description || '—'}</p>
+            <div style="display:flex; align-items:center; gap:14px; margin-top:16px; flex-wrap:wrap;">
+              <span class="mono" style="display:inline-flex; align-items:center; gap:6px; font-size:11px; font-weight:600;"><span style="width:10px; height:10px; background:${color}; border:1.5px solid #111110; display:inline-block;"></span>${r.language || 'N/A'}</span>
+              <span class="mono" style="font-size:11px; font-weight:600; color:#54524a;">★ ${r.stargazers_count}</span>
+              <span class="mono" style="font-size:11px; font-weight:600; color:#54524a;">⑂ ${r.forks_count}</span>
+            </div>
+          </a>`;
+        }).join('');
+        document.getElementById('state-loading').style.display = 'none';
+        document.getElementById('state-loaded').style.display = 'block';
+      })
+      .catch(err => {
+        document.getElementById('state-loading').style.display = 'none';
+        document.getElementById('state-error').style.display = 'block';
+        document.getElementById('err-msg').textContent = String(err.message || err);
+      });
+  }
 
   document.addEventListener('DOMContentLoaded', () => {
-    applyLang(localStorage.getItem('siteLang') || 'fr');
-    document.querySelectorAll('.reveal').forEach(el => ro.observe(el));
-    document.getElementById('lang-btn').addEventListener('click', toggleLang);
-    document.getElementById('retry-btn').addEventListener('click', loadGitHubRepos);
-    loadGitHubRepos();
+    const lang = localStorage.getItem('siteLang') || 'fr';
+    applyLang(lang);
+    document.getElementById('lang-btn').addEventListener('click', () => {
+      const cur = localStorage.getItem('siteLang') || 'fr';
+      const next = cur === 'fr' ? 'en' : 'fr';
+      localStorage.setItem('siteLang', next);
+      applyLang(next);
+    });
+    fetchRepos();
   });
 </script>
 </body>

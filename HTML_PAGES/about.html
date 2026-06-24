@@ -3,294 +3,128 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>À propos — Joris Suarez</title>
-  <meta name="description" content="Développeur web et UI designer depuis 2017 basé à Lyon. Découvrez mon parcours, mes compétences et ma façon de travailler.">
+  <title>Joris Suarez — À propos</title>
   <link rel="icon" type="image/svg+xml" href="../favicon.svg">
-  <link rel="stylesheet" href="../styles.css">
-  <link rel="stylesheet" href="../css/about.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <style>
+    body { margin:0; background:#e8e6dd; color:#111110; font-family:'Archivo',sans-serif; -webkit-font-smoothing:antialiased; }
+    * { box-sizing:border-box; }
+    ::selection { background:#e8ff00; color:#111110; }
+    a { color:inherit; text-decoration:none; }
+    .mono { font-family:'JetBrains Mono',monospace; }
+    .wide { font-weight:900; transform:scaleX(1.04); transform-origin:left; display:inline-block; }
+    .cut { clip-path:polygon(0 0,100% 0,100% calc(100% - 9px),calc(100% - 9px) 100%,0 100%); }
+    .stripeY { background:repeating-linear-gradient(-45deg,#111110 0 12px,#e8ff00 12px 24px); }
+  </style>
 </head>
 <body>
 
-<main class="about-page">
+<!-- HUD RAIL -->
+<div class="mono" style="display:flex; justify-content:space-between; align-items:center; gap:12px; padding:8px clamp(16px,4vw,40px); background:#111110; color:#8a897d; font-size:9.5px; letter-spacing:0.16em; text-transform:uppercase;">
+  <span style="color:#e8ff00;">◢◤</span>
+  <span style="color:#e8e6dd;">&ldquo;ABOUT&rdquo; — INDEX_02</span>
+  <span style="flex:1; height:2px; background:repeating-linear-gradient(90deg,#34342b 0 5px,transparent 5px 10px);"></span>
+  <span>LYON · FR</span>
+  <span style="color:#e8ff00;">◢◤</span>
+</div>
 
-  <!-- Hero -->
-  <section class="about-hero reveal" style="--delay:0s">
-    <span class="label" data-fr="À propos de moi" data-en="About me">À propos de moi</span>
-    <h1 class="about-headline" data-fr="Je construis des interfaces pensées pour les humains." data-en="I build interfaces designed for humans.">Je construis des interfaces<br>pensées pour les humains.</h1>
-    <p class="about-bio" data-fr="Développeur web et UI designer depuis 2017. Je suis passionné par l'intersection du design et du code — créer des expériences qui semblent simples en surface, mais qui sont réfléchies dans les moindres détails. Basé à Lyon, je travaille en remote sur des projets qui valent la peine d'être bien faits." data-en="Web developer and UI designer since 2017. I'm passionate about the intersection of design and code — crafting experiences that look simple on the surface, but are thoughtfully designed down to the smallest detail. Based in Lyon, working remotely on projects worth doing right.">Développeur web et UI designer depuis 2017. Je suis passionné par l'intersection du design et du code — créer des expériences qui semblent simples en surface, mais qui sont réfléchies dans les moindres détails. Basé à Lyon, je travaille en remote sur des projets qui valent la peine d'être bien faits.</p>
-    <div class="about-meta">
-      <span class="meta-chip">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="13" height="13"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-        Lyon, France
-      </span>
-      <span class="meta-chip">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="13" height="13"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
-        <span data-fr="Depuis 2017" data-en="Since 2017">Depuis 2017</span>
-      </span>
-      <span class="meta-chip">
-        <div class="status-dot" style="width:6px;height:6px;flex-shrink:0"></div>
-        <span data-fr="Disponible" data-en="Available">Disponible</span>
-      </span>
+<main style="max-width:1100px; margin:0 auto; padding:clamp(40px,7vw,90px) clamp(16px,4vw,40px) 150px;">
+
+  <!-- HEADER -->
+  <header style="position:relative;">
+    <div aria-hidden="true" class="wide" style="position:absolute; right:-2%; top:-18%; font-size:min(40vw,340px); line-height:0.7; color:rgba(17,17,16,0.05); pointer-events:none; transform-origin:right;">A</div>
+    <div class="mono" style="font-size:11px; letter-spacing:0.24em; color:#c43a0c; text-transform:uppercase; font-weight:700; margin-bottom:20px;" data-fr="// À PROPOS" data-en="// ABOUT">// À PROPOS</div>
+    <h1 class="wide" style="position:relative; margin:0; font-size:clamp(40px,7vw,90px); line-height:0.9; text-transform:uppercase; max-width:16ch;" data-fr="La clarté comme rébellion." data-en="Clarity as rebellion.">La clarté comme rébellion.</h1>
+    <p style="position:relative; margin:28px 0 0; max-width:60ch; font-size:clamp(16px,1.9vw,20px); line-height:1.6; color:#33322c; font-weight:500;" data-fr="Joris Suarez — développeur fullstack basé à Lyon. Je conçois et construis des produits logiciels avec une obsession pour la clarté, le soin et le point de vue. Self-made et discipliné depuis 2017, je crois que l'ingénierie est une discipline de pensée autant qu'un acte créatif. Mon objectif : prouver qu'on peut bâtir l'inhabituel sans permission, à force de goût et de rigueur." data-en="Joris Suarez — fullstack developer based in Lyon. I design and build software products with an obsession for clarity, craft and point of view. Self-made and disciplined since 2017, I believe engineering is a thinking discipline as much as a creative act. My goal: prove you can build the uncommon without permission — through taste and rigor.">Joris Suarez — développeur fullstack basé à Lyon. Je conçois et construis des produits logiciels avec une obsession pour la clarté, le soin et le point de vue. Self-made et discipliné depuis 2017, je crois que l'ingénierie est une discipline de pensée autant qu'un acte créatif. Mon objectif : prouver qu'on peut bâtir l'inhabituel sans permission, à force de goût et de rigueur.</p>
+    <div style="display:flex; gap:9px; flex-wrap:wrap; margin-top:26px;">
+      <span class="mono cut" style="background:#111110; color:#e8ff00; font-size:11px; font-weight:700; letter-spacing:0.08em; padding:7px 14px; text-transform:uppercase;" data-fr="Lyon" data-en="Lyon">Lyon</span>
+      <span class="mono cut" style="background:#111110; color:#e8ff00; font-size:11px; font-weight:700; letter-spacing:0.08em; padding:7px 14px; text-transform:uppercase;" data-fr="Depuis 2017" data-en="Since 2017">Depuis 2017</span>
+      <span class="mono cut" style="background:#111110; color:#e8ff00; font-size:11px; font-weight:700; letter-spacing:0.08em; padding:7px 14px; text-transform:uppercase;" data-fr="Disponible" data-en="Available">Disponible</span>
     </div>
-  </section>
+  </header>
 
-  <!-- Skills -->
-  <section class="skills-section reveal" style="--delay:0.1s">
-    <span class="label" data-fr="Compétences" data-en="Skills">Compétences</span>
-    <div class="skills-grid">
+  <div class="stripeY" aria-hidden="true" style="height:16px; margin:56px 0;"></div>
 
-      <div class="skill-group card">
-        <div class="skill-group-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
-        </div>
-        <h3 data-fr="Développement" data-en="Development">Développement</h3>
-        <div class="skill-tags">
-          <a href="works.html" class="tag tag-link">HTML5</a>
-          <a href="works.html" class="tag tag-link">CSS3</a>
-          <a href="works.html" class="tag tag-link">JavaScript</a>
-          <a href="works.html" class="tag tag-link">TypeScript</a>
-          <a href="works.html" class="tag tag-link">React</a>
-          <a href="works.html" class="tag tag-link">Node.js</a>
-          <a href="works.html" class="tag tag-link">Rust</a>
-          <a href="works.html" class="tag tag-link">Tauri</a>
-          <a href="works.html" class="tag tag-link">Python</a>
+  <!-- PROCESS -->
+  <section>
+    <div class="mono" style="font-size:11px; letter-spacing:0.2em; color:#c43a0c; text-transform:uppercase; font-weight:700; margin-bottom:8px;">[ PROCESS ]</div>
+    <h2 class="wide" style="margin:0 0 30px; font-size:clamp(26px,4vw,44px); text-transform:uppercase; line-height:0.95;" data-fr="Comment je travaille" data-en="How I work">Comment je travaille</h2>
+    <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:0; border:2px solid #111110;">
+
+      <div style="padding:26px; border-right:2px solid #111110; position:relative; min-height:200px; display:flex; flex-direction:column; justify-content:space-between;">
+        <div class="wide" style="font-size:64px; line-height:0.8; color:#ff4d0f;">01</div>
+        <div>
+          <div class="wide" style="font-size:22px; text-transform:uppercase; margin-bottom:8px;" data-fr="Interview" data-en="Interview">Interview</div>
+          <p style="margin:0; font-size:14px; line-height:1.55; color:#54524a; font-weight:500;" data-fr="Comprendre le besoin réel, au-delà du brief. Poser les bonnes questions avant de coder." data-en="Understand the real need beyond the brief. Ask the right questions before writing code.">Comprendre le besoin réel, au-delà du brief. Poser les bonnes questions avant de coder.</p>
         </div>
       </div>
 
-      <div class="skill-group card">
-        <div class="skill-group-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="9" cy="9" r="2"/><path d="M21 15l-5-5L5 21"/></svg>
-        </div>
-        <h3 data-fr="Design & UX" data-en="Design & UX">Design & UX</h3>
-        <div class="skill-tags">
-          <a href="works.html" class="tag tag-link">Figma</a>
-          <span class="tag">UI Design</span>
-          <span class="tag">UX Research</span>
-          <span class="tag">Prototyping</span>
-          <span class="tag">Design System</span>
-          <span class="tag">Wireframing</span>
+      <div style="padding:26px; border-right:2px solid #111110; position:relative; min-height:200px; display:flex; flex-direction:column; justify-content:space-between;">
+        <div class="wide" style="font-size:64px; line-height:0.8; color:#ff4d0f;">02</div>
+        <div>
+          <div class="wide" style="font-size:22px; text-transform:uppercase; margin-bottom:8px;" data-fr="Recherche UX" data-en="UX Research">Recherche UX</div>
+          <p style="margin:0; font-size:14px; line-height:1.55; color:#54524a; font-weight:500;" data-fr="Cartographier les usages, les frictions et les opportunités. Chercher la clarté." data-en="Map usage, friction and opportunity. Hunt for clarity.">Cartographier les usages, les frictions et les opportunités. Chercher la clarté.</p>
         </div>
       </div>
 
-      <div class="skill-group card">
-        <div class="skill-group-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
-        </div>
-        <h3 data-fr="Infrastructure" data-en="Infrastructure">Infrastructure</h3>
-        <div class="skill-tags">
-          <a href="works.html" class="tag tag-link">Supabase</a>
-          <a href="works.html" class="tag tag-link">Tailwind CSS</a>
-          <span class="tag">Git</span>
-          <span class="tag">REST API</span>
-          <span class="tag">SQL</span>
+      <div style="padding:26px; position:relative; min-height:200px; display:flex; flex-direction:column; justify-content:space-between;">
+        <div class="wide" style="font-size:64px; line-height:0.8; color:#ff4d0f;">03</div>
+        <div>
+          <div class="wide" style="font-size:22px; text-transform:uppercase; margin-bottom:8px;" data-fr="Design UI" data-en="UI Design">Design UI</div>
+          <p style="margin:0; font-size:14px; line-height:1.55; color:#54524a; font-weight:500;" data-fr="Traduire la pensée en interface : nette, intentionnelle, durable." data-en="Translate thinking into interface: clean, intentional, durable.">Traduire la pensée en interface : nette, intentionnelle, durable.</p>
         </div>
       </div>
 
     </div>
   </section>
 
-  <!-- Process -->
-  <section class="process-section">
-    <span class="label reveal" style="--delay:0.15s" data-fr="Mon processus" data-en="My process">Mon processus</span>
-    <div class="process-grid">
+  <div class="stripeY" aria-hidden="true" style="height:16px; margin:56px 0;"></div>
 
-      <article class="card process-card reveal" style="--delay:0.2s">
-        <div class="process-num">01</div>
-        <div class="process-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75">
-            <path d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/>
-          </svg>
-        </div>
-        <h3 data-fr="Interview" data-en="Interview">Interview</h3>
-        <p data-fr="Comprendre les besoins réels commence ici. À travers des entretiens détaillés, je cerne vos objectifs et les attentes de vos utilisateurs." data-en="Understanding real needs starts here. Through detailed interviews, I identify your goals and your users' expectations.">Comprendre les besoins réels commence ici. À travers des entretiens détaillés, je cerne vos objectifs et les attentes de vos utilisateurs.</p>
-      </article>
-
-      <article class="card process-card reveal" style="--delay:0.25s">
-        <div class="process-num">02</div>
-        <div class="process-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75">
-            <circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/>
-          </svg>
-        </div>
-        <h3 data-fr="Recherche UX" data-en="UX Research">Recherche UX</h3>
-        <p data-fr="En analysant la concurrence et les cibles, je pose les bases d'une direction produit stratégique et orientée données." data-en="By analyzing competition and targets, I lay the groundwork for a strategic, data-driven product direction.">En analysant la concurrence et les cibles, je pose les bases d'une direction produit stratégique et orientée données.</p>
-      </article>
-
-      <article class="card process-card reveal" style="--delay:0.3s">
-        <div class="process-num">03</div>
-        <div class="process-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75">
-            <path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/>
-          </svg>
-        </div>
-        <h3 data-fr="Design UI" data-en="UI Design">Design UI</h3>
-        <p data-fr="Traduire les données en parcours utilisateur, wireframes et prototypes interactifs. L'HTML, CSS et JS donnent vie à tout ça." data-en="Translating data into user flows, wireframes and interactive prototypes. HTML, CSS and JS bring it all to life.">Traduire les données en parcours utilisateur, wireframes et prototypes interactifs. L'HTML, CSS et JS donnent vie à tout ça.</p>
-      </article>
-
-    </div>
-  </section>
-
-  <!-- Values -->
-  <section class="values-section reveal" style="--delay:0.35s">
-    <span class="label" data-fr="Ce qui me guide" data-en="What drives me">Ce qui me guide</span>
-    <div class="values-grid">
-      <div class="value-card card">
-        <div class="value-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><circle cx="12" cy="12" r="10"/><path d="M12 8v4M12 16h.01"/></svg>
-        </div>
-        <h4 data-fr="Clarté" data-en="Clarity">Clarté</h4>
-        <p data-fr="Un bon design se comprend au premier regard. Chaque décision — typographie, espacement, hiérarchie — doit guider sans effort." data-en="Good design is understood at first glance. Every decision — typography, spacing, hierarchy — should guide effortlessly.">Un bon design se comprend au premier regard. Chaque décision: typographie, espacement, hiérarchie, doit guider sans effort.</p>
-      </div>
-      <div class="value-card card">
-        <div class="value-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-        </div>
-        <h4 data-fr="Qualité" data-en="Quality">Qualité</h4>
-        <p data-fr="Chaque pixel, chaque ligne de code est intentionnelle. Je mesure chaque parcel de code et le rend optimal." data-en="Every pixel, every line of code is intentional. I optimize every code and make it fluent.">Chaque pixel, chaque ligne de code est intentionnelle. Je mesure chaque parcel de code et le rend optimal.</p>
-      </div>
-      <div class="value-card card">
-        <div class="value-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M9 12l2 2 4-4"/><path d="M20.618 5.984A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622C17.176 19.29 21 14.591 21 9a12.02 12.02 0 00-.382-3.016z"/></svg>
-        </div>
-        <h4 data-fr="Discipline" data-en="Discipline">Discipline</h4>
-        <p data-fr="Travailler avec méthode, itérer avec intention. La régularité construit mieux que l'inspiration sporadique." data-en="Work methodically, iterate with intention. Consistency builds better than sporadic inspiration.">Travailler avec méthode, itérer avec intention. La régularité construit mieux que l'inspiration sporadique.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Philosophy Podium -->
-  <section class="philosophy-section reveal" style="--delay:0.37s">
-    <span class="label" data-fr="Philosophie de code" data-en="Coding philosophy">Philosophie de code</span>
-    <div class="podium">
-
-      <!-- 2nd -->
-      <div class="podium-col">
-        <div class="podium-card card">
-          <div class="podium-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><circle cx="12" cy="12" r="10"/><polygon points="16.24,7.76 14.12,14.12 7.76,16.24 9.88,9.88"/></svg>
-          </div>
-          <h3 class="podium-name" data-fr="Curieux" data-en="Curious">Curieux</h3>
-          <p class="podium-desc" data-fr="Toujours à explorer ce qui est au-delà de la prochaine colline. L'apprentissage ne s'arrête jamais." data-en="Always exploring what's beyond the next hill. Learning never stops.">Toujours à explorer ce qui est au-delà de la prochaine colline. L'apprentissage ne s'arrête jamais.</p>
-        </div>
-        <div class="podium-block podium-block-2">02</div>
-      </div>
-
-      <!-- 1st -->
-      <div class="podium-col">
-        <div class="podium-card podium-card-gold card">
-          <div class="podium-icon podium-icon-gold">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/><path d="M9 1v3M15 1v3M9 20v3M15 20v3M1 9h3M1 15h3M20 9h3M20 15h3"/></svg>
-          </div>
-          <h3 class="podium-name">Hardware Awareness</h3>
-          <p class="podium-desc" data-fr="Écrire du code qui respecte la machine. Cache, mémoire, cycles CPU, chaque instruction compte." data-en="Writing code that respects the machine. Cache, memory, CPU cycles, every instruction counts.">Écrire du code qui respecte la machine. Cache, mémoire, cycles CPU, chaque instruction compte.</p>
-        </div>
-        <div class="podium-block podium-block-1">01</div>
-      </div>
-
-      <!-- 3rd -->
-      <div class="podium-col">
-        <div class="podium-card card">
-          <div class="podium-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
-          </div>
-          <h3 class="podium-name" data-fr="Mommy Helper" data-en="Mommy Helper">Mommy Helper</h3>
-          <p class="podium-desc" data-fr="Si ma mère comprend, tout le monde comprend. La complexité ne devrait jamais être visible." data-en="If my mom gets it, anyone does. Complexity should never be visible.">Si ma mère comprend, tout le monde comprend. La complexité ne devrait jamais être visible.</p>
-        </div>
-        <div class="podium-block podium-block-3">03</div>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- Interests -->
-  <section class="interests-section reveal" style="--delay:0.4s">
-    <span class="label" data-fr="Centres d'intérêt" data-en="Interests">Centres d'intérêt</span>
-    <div class="interests-grid">
-      <div class="interest-item">
-        <div class="interest-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><rect x="2" y="6" width="20" height="12" rx="2"/><path d="M6 12h4M12 10v4M16 12h2"/></svg>
-        </div>
-        <span data-fr="Jeux vidéo" data-en="Video games">Jeux vidéo</span>
-      </div>
-      <div class="interest-item">
-        <div class="interest-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
-        </div>
-        <span data-fr="Musique" data-en="Music">Musique</span>
-      </div>
-      <div class="interest-item">
-        <div class="interest-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-        </div>
-        <span>Airsoft</span>
-      </div>
-      <div class="interest-item">
-        <div class="interest-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M2 3h6a4 4 0 014 4v14a3 3 0 00-3-3H2z"/><path d="M22 3h-6a4 4 0 00-4 4v14a3 3 0 013-3h7z"/></svg>
-        </div>
-        <span data-fr="Philosophie" data-en="Philosophy">Philosophie</span>
-      </div>
+  <!-- INTERESTS -->
+  <section>
+    <div class="mono" style="font-size:11px; letter-spacing:0.2em; color:#c43a0c; text-transform:uppercase; font-weight:700; margin-bottom:8px;">[ INTERESTS ]</div>
+    <h2 class="wide" style="margin:0 0 24px; font-size:clamp(26px,4vw,44px); text-transform:uppercase; line-height:0.95;" data-fr="Ce qui me nourrit" data-en="What fuels me">Ce qui me nourrit</h2>
+    <div style="display:flex; gap:10px; flex-wrap:wrap;">
+      <span class="cut" style="background:#e8ff00; color:#111110; border:2px solid #111110; font-weight:800; font-size:clamp(16px,2vw,22px); letter-spacing:0.02em; padding:12px 20px; text-transform:uppercase;" data-fr="Jeux vidéo" data-en="Video Games">Jeux vidéo</span>
+      <span class="cut" style="background:transparent; color:#111110; border:2px solid #111110; font-weight:800; font-size:clamp(16px,2vw,22px); letter-spacing:0.02em; padding:12px 20px; text-transform:uppercase;" data-fr="Musique" data-en="Music">Musique</span>
+      <span class="cut" style="background:#ff4d0f; color:#111110; border:2px solid #111110; font-weight:800; font-size:clamp(16px,2vw,22px); letter-spacing:0.02em; padding:12px 20px; text-transform:uppercase;">Airsoft</span>
+      <span class="cut" style="background:transparent; color:#111110; border:2px solid #111110; font-weight:800; font-size:clamp(16px,2vw,22px); letter-spacing:0.02em; padding:12px 20px; text-transform:uppercase;" data-fr="Philosophie" data-en="Philosophy">Philosophie</span>
     </div>
   </section>
 
 </main>
 
-<nav class="dock" aria-label="Navigation">
-  <a href="../index.html" class="dock-item" aria-label="Accueil">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M3 10.5L12 3l9 7.5V20a1 1 0 01-1 1H4a1 1 0 01-1-1v-9.5z"/><path d="M9 21V12h6v9"/></svg>
-    <span class="dock-tooltip" data-fr="Accueil" data-en="Home">Accueil</span>
-  </a>
-  <a href="works.html" class="dock-item" aria-label="Travaux">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg>
-    <span class="dock-tooltip" data-fr="Travaux" data-en="Works">Travaux</span>
-  </a>
-  <a href="blogs.html" class="dock-item" aria-label="Blog">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M4 6h16M4 10h16M4 14h10M4 18h7"/></svg>
-    <span class="dock-tooltip">Blog</span>
-  </a>
-  <a href="about.html" class="dock-item active" aria-label="À propos">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.582-7 8-7s8 3 8 7"/></svg>
-    <span class="dock-tooltip" data-fr="À propos" data-en="About">À propos</span>
-  </a>
-  <a href="services.html" class="dock-item" aria-label="Lab">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M9 3h6v8l3.5 9H5.5L9 11V3z"/><path d="M6.5 18.5h11"/></svg>
-    <span class="dock-tooltip">Lab</span>
-  </a>
-  <a href="contact.html" class="dock-item" aria-label="Contact">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 7l10 7 10-7"/></svg>
-    <span class="dock-tooltip">Contact</span>
-  </a>
-  <div class="dock-sep" aria-hidden="true"></div>
-  <button class="dock-item" id="lang-btn" aria-label="Changer de langue">
-    <span class="dock-lang" id="lang-display">FR</span>
-    <span class="dock-tooltip" id="lang-tip">Switch to English</span>
-  </button>
+<!-- DOCK -->
+<nav style="position:fixed; left:50%; bottom:20px; transform:translateX(-50%); z-index:70; display:flex; align-items:stretch; gap:2px; background:#111110; border:2px solid #111110; box-shadow:6px 6px 0 rgba(17,17,16,0.25);">
+  <a href="../index.html" class="mono" style="display:flex; align-items:center; padding:11px 15px; font-size:11px; font-weight:700; letter-spacing:0.08em; text-transform:uppercase; color:#e8e6dd;" onmouseover="this.style.color='#e8ff00'" onmouseout="this.style.color='#e8e6dd'" data-fr="Accueil" data-en="Home">Accueil</a>
+  <a href="about.html" class="mono" style="display:flex; align-items:center; padding:11px 15px; font-size:11px; font-weight:800; letter-spacing:0.08em; text-transform:uppercase; background:#e8ff00; color:#111110;" data-fr="À propos" data-en="About">À propos</a>
+  <a href="works.html" class="mono" style="display:flex; align-items:center; padding:11px 15px; font-size:11px; font-weight:700; letter-spacing:0.08em; text-transform:uppercase; color:#e8e6dd;" onmouseover="this.style.color='#e8ff00'" onmouseout="this.style.color='#e8e6dd'">Works</a>
+  <a href="blogs.html" class="mono" style="display:flex; align-items:center; padding:11px 15px; font-size:11px; font-weight:700; letter-spacing:0.08em; text-transform:uppercase; color:#e8e6dd;" onmouseover="this.style.color='#e8ff00'" onmouseout="this.style.color='#e8e6dd'">Blog</a>
+  <a href="lab.html" class="mono" style="display:flex; align-items:center; padding:11px 15px; font-size:11px; font-weight:700; letter-spacing:0.08em; text-transform:uppercase; color:#e8e6dd;" onmouseover="this.style.color='#e8ff00'" onmouseout="this.style.color='#e8e6dd'">Lab</a>
+  <a href="contact.html" class="mono" style="display:flex; align-items:center; padding:11px 15px; font-size:11px; font-weight:700; letter-spacing:0.08em; text-transform:uppercase; color:#e8e6dd;" onmouseover="this.style.color='#e8ff00'" onmouseout="this.style.color='#e8e6dd'" data-fr="Contact" data-en="Contact">Contact</a>
+  <button id="lang-btn" class="mono" style="display:flex; align-items:center; padding:11px 14px; font-size:11px; font-weight:800; letter-spacing:0.08em; text-transform:uppercase; background:#ff4d0f; color:#111110; border:none; cursor:pointer;">FR</button>
 </nav>
 
 <script>
-  function toggleLang() {
-    const cur = localStorage.getItem('siteLang') || 'fr';
-    const next = cur === 'fr' ? 'en' : 'fr';
-    applyLang(next);
-    localStorage.setItem('siteLang', next);
-  }
   function applyLang(lang) {
     document.querySelectorAll('[data-fr][data-en]').forEach(el => {
       el.textContent = el.getAttribute('data-' + lang);
     });
     document.documentElement.lang = lang;
-    const d = document.getElementById('lang-display');
-    const t = document.getElementById('lang-tip');
-    if (d) d.textContent = lang.toUpperCase();
-    if (t) t.textContent = lang === 'fr' ? 'Switch to English' : 'Passer en français';
+    const btn = document.getElementById('lang-btn');
+    if (btn) btn.textContent = lang === 'fr' ? 'EN' : 'FR';
   }
-  const ro = new IntersectionObserver((entries) => {
-    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); ro.unobserve(e.target); } });
-  }, { threshold: 0.08 });
   document.addEventListener('DOMContentLoaded', () => {
-    applyLang(localStorage.getItem('siteLang') || 'fr');
-    document.querySelectorAll('.reveal').forEach(el => ro.observe(el));
-    document.getElementById('lang-btn').addEventListener('click', toggleLang);
+    const lang = localStorage.getItem('siteLang') || 'fr';
+    applyLang(lang);
+    document.getElementById('lang-btn').addEventListener('click', () => {
+      const cur = localStorage.getItem('siteLang') || 'fr';
+      const next = cur === 'fr' ? 'en' : 'fr';
+      localStorage.setItem('siteLang', next);
+      applyLang(next);
+    });
   });
 </script>
 </body>
