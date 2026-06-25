@@ -338,7 +338,7 @@
     document.getElementById('draft-title').value = '';
     document.getElementById('draft-content').value = '';
     document.getElementById('publish-btn').disabled = false;
-    document.getElementById('publish-btn').textContent = i18n[currentLang].publish || '＋ Publier l\'article';
+    applyLangStatic(currentLang);
     await renderBlogs();
   });
 
